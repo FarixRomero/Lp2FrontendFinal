@@ -349,6 +349,5 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-LP2Clinica/LP2Clinica/LP2Clinica.csproj
 LP2Clinica/LP2Clinica/Connected Services/*
-LP2Clinica/LP2Clinica/App.config
+
