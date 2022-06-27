@@ -40,6 +40,9 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dtgRecetaMedicaXDiagnostico = new System.Windows.Forms.DataGridView();
             this.lblRecetaMedica = new System.Windows.Forms.Label();
+            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pbDiagnostico)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgRecetaMedicaXDiagnostico)).BeginInit();
@@ -51,9 +54,10 @@
             this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(37)))), ((int)(((byte)(91)))));
             this.lblTitulo.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(319, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(425, 11);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(171, 41);
+            this.lblTitulo.Size = new System.Drawing.Size(214, 51);
             this.lblTitulo.TabIndex = 79;
             this.lblTitulo.Text = "Diagnóstico";
             // 
@@ -63,9 +67,10 @@
             this.lblResultadoDiagnostico.BackColor = System.Drawing.Color.Transparent;
             this.lblResultadoDiagnostico.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultadoDiagnostico.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblResultadoDiagnostico.Location = new System.Drawing.Point(18, 102);
+            this.lblResultadoDiagnostico.Location = new System.Drawing.Point(24, 126);
+            this.lblResultadoDiagnostico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResultadoDiagnostico.Name = "lblResultadoDiagnostico";
-            this.lblResultadoDiagnostico.Size = new System.Drawing.Size(206, 22);
+            this.lblResultadoDiagnostico.Size = new System.Drawing.Size(260, 28);
             this.lblResultadoDiagnostico.TabIndex = 32;
             this.lblResultadoDiagnostico.Text = "_Resultado Diagnostico_";
             // 
@@ -75,9 +80,10 @@
             this.lblResultado.BackColor = System.Drawing.Color.Transparent;
             this.lblResultado.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResultado.ForeColor = System.Drawing.Color.White;
-            this.lblResultado.Location = new System.Drawing.Point(18, 80);
+            this.lblResultado.Location = new System.Drawing.Point(24, 98);
+            this.lblResultado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(93, 22);
+            this.lblResultado.Size = new System.Drawing.Size(118, 28);
             this.lblResultado.TabIndex = 21;
             this.lblResultado.Text = "Resultado:";
             // 
@@ -85,9 +91,10 @@
             // 
             this.pbDiagnostico.BackColor = System.Drawing.Color.Transparent;
             this.pbDiagnostico.Image = global::LP2Clinica.Properties.Resources._0bdfc3016d176e14e58e824d5f0fa027_removebg_preview;
-            this.pbDiagnostico.Location = new System.Drawing.Point(12, 63);
+            this.pbDiagnostico.Location = new System.Drawing.Point(16, 78);
+            this.pbDiagnostico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbDiagnostico.Name = "pbDiagnostico";
-            this.pbDiagnostico.Size = new System.Drawing.Size(187, 197);
+            this.pbDiagnostico.Size = new System.Drawing.Size(249, 242);
             this.pbDiagnostico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbDiagnostico.TabIndex = 80;
             this.pbDiagnostico.TabStop = false;
@@ -98,9 +105,10 @@
             this.lblObservacionDiagnostico.BackColor = System.Drawing.Color.Transparent;
             this.lblObservacionDiagnostico.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObservacionDiagnostico.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblObservacionDiagnostico.Location = new System.Drawing.Point(18, 164);
+            this.lblObservacionDiagnostico.Location = new System.Drawing.Point(24, 202);
+            this.lblObservacionDiagnostico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblObservacionDiagnostico.Name = "lblObservacionDiagnostico";
-            this.lblObservacionDiagnostico.Size = new System.Drawing.Size(213, 22);
+            this.lblObservacionDiagnostico.Size = new System.Drawing.Size(271, 28);
             this.lblObservacionDiagnostico.TabIndex = 34;
             this.lblObservacionDiagnostico.Text = "_Resultado Observación_";
             // 
@@ -110,9 +118,10 @@
             this.lblObservacion.BackColor = System.Drawing.Color.Transparent;
             this.lblObservacion.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObservacion.ForeColor = System.Drawing.Color.White;
-            this.lblObservacion.Location = new System.Drawing.Point(18, 142);
+            this.lblObservacion.Location = new System.Drawing.Point(24, 175);
+            this.lblObservacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblObservacion.Name = "lblObservacion";
-            this.lblObservacion.Size = new System.Drawing.Size(110, 22);
+            this.lblObservacion.Size = new System.Drawing.Size(141, 28);
             this.lblObservacion.TabIndex = 33;
             this.lblObservacion.Text = "Observación";
             // 
@@ -126,9 +135,11 @@
             this.groupBox1.Controls.Add(this.lblObservacion);
             this.groupBox1.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(220, 63);
+            this.groupBox1.Location = new System.Drawing.Point(293, 78);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(347, 207);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(463, 255);
             this.groupBox1.TabIndex = 81;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Diagnóstico";
@@ -139,9 +150,10 @@
             this.lblCodigoDiagnostico.BackColor = System.Drawing.Color.Transparent;
             this.lblCodigoDiagnostico.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoDiagnostico.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblCodigoDiagnostico.Location = new System.Drawing.Point(18, 43);
+            this.lblCodigoDiagnostico.Location = new System.Drawing.Point(24, 53);
+            this.lblCodigoDiagnostico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigoDiagnostico.Name = "lblCodigoDiagnostico";
-            this.lblCodigoDiagnostico.Size = new System.Drawing.Size(184, 22);
+            this.lblCodigoDiagnostico.Size = new System.Drawing.Size(232, 28);
             this.lblCodigoDiagnostico.TabIndex = 36;
             this.lblCodigoDiagnostico.Text = "_Código Diagnostico_";
             // 
@@ -151,9 +163,10 @@
             this.lblCodigo.BackColor = System.Drawing.Color.Transparent;
             this.lblCodigo.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.White;
-            this.lblCodigo.Location = new System.Drawing.Point(18, 21);
+            this.lblCodigo.Location = new System.Drawing.Point(24, 26);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(198, 22);
+            this.lblCodigo.Size = new System.Drawing.Size(251, 28);
             this.lblCodigo.TabIndex = 35;
             this.lblCodigo.Text = "Código del Diagnóstico:";
             // 
@@ -164,9 +177,10 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(12, 446);
+            this.btnCerrar.Location = new System.Drawing.Point(16, 549);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(119, 30);
+            this.btnCerrar.Size = new System.Drawing.Size(159, 37);
             this.btnCerrar.TabIndex = 82;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -176,12 +190,19 @@
             this.dtgRecetaMedicaXDiagnostico.AllowUserToAddRows = false;
             this.dtgRecetaMedicaXDiagnostico.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dtgRecetaMedicaXDiagnostico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgRecetaMedicaXDiagnostico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colCodigo,
+            this.colNombre,
+            this.colCantidad});
             this.dtgRecetaMedicaXDiagnostico.GridColor = System.Drawing.Color.DarkTurquoise;
-            this.dtgRecetaMedicaXDiagnostico.Location = new System.Drawing.Point(12, 324);
+            this.dtgRecetaMedicaXDiagnostico.Location = new System.Drawing.Point(16, 399);
+            this.dtgRecetaMedicaXDiagnostico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgRecetaMedicaXDiagnostico.Name = "dtgRecetaMedicaXDiagnostico";
             this.dtgRecetaMedicaXDiagnostico.RowHeadersWidth = 51;
-            this.dtgRecetaMedicaXDiagnostico.Size = new System.Drawing.Size(555, 104);
+            this.dtgRecetaMedicaXDiagnostico.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgRecetaMedicaXDiagnostico.Size = new System.Drawing.Size(740, 128);
             this.dtgRecetaMedicaXDiagnostico.TabIndex = 94;
+            this.dtgRecetaMedicaXDiagnostico.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgRecetaMedicaXDiagnostico_CellFormatting);
             // 
             // lblRecetaMedica
             // 
@@ -189,24 +210,47 @@
             this.lblRecetaMedica.BackColor = System.Drawing.Color.Transparent;
             this.lblRecetaMedica.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecetaMedica.ForeColor = System.Drawing.Color.White;
-            this.lblRecetaMedica.Location = new System.Drawing.Point(12, 299);
+            this.lblRecetaMedica.Location = new System.Drawing.Point(16, 368);
+            this.lblRecetaMedica.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRecetaMedica.Name = "lblRecetaMedica";
-            this.lblRecetaMedica.Size = new System.Drawing.Size(129, 22);
+            this.lblRecetaMedica.Size = new System.Drawing.Size(164, 28);
             this.lblRecetaMedica.TabIndex = 37;
             this.lblRecetaMedica.Text = "Receta Médica:";
             // 
+            // colCodigo
+            // 
+            this.colCodigo.HeaderText = "CODIGO";
+            this.colCodigo.MinimumWidth = 6;
+            this.colCodigo.Name = "colCodigo";
+            this.colCodigo.Width = 125;
+            // 
+            // colNombre
+            // 
+            this.colNombre.HeaderText = "NOMBRE";
+            this.colNombre.MinimumWidth = 6;
+            this.colNombre.Name = "colNombre";
+            this.colNombre.Width = 200;
+            // 
+            // colCantidad
+            // 
+            this.colCantidad.HeaderText = "CANTIDAD";
+            this.colCantidad.MinimumWidth = 6;
+            this.colCantidad.Name = "colCantidad";
+            this.colCantidad.Width = 125;
+            // 
             // frmMostrarDiagnostico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(37)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(595, 492);
+            this.ClientSize = new System.Drawing.Size(793, 606);
             this.Controls.Add(this.lblRecetaMedica);
             this.Controls.Add(this.dtgRecetaMedicaXDiagnostico);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pbDiagnostico);
             this.Controls.Add(this.lblTitulo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMostrarDiagnostico";
             this.Text = "Datos del Diagnóstico";
             ((System.ComponentModel.ISupportInitialize)(this.pbDiagnostico)).EndInit();
@@ -232,5 +276,8 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.DataGridView dtgRecetaMedicaXDiagnostico;
         private System.Windows.Forms.Label lblRecetaMedica;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
     }
 }
