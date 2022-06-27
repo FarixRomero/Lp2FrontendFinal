@@ -493,12 +493,6 @@
     </EmbeddedResource>
     <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS.wsdl" />
     <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS.xsd">
-
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS1.wsdl" />
-    <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS1.xsd">
-
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarCitaMedicaPorIdResponse.datasource">
@@ -558,11 +552,9 @@
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.eliminarRecetaMedicaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.generarReporteDiagnosticoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.historialClinico.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -626,10 +618,12 @@
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarHorariosXMedicoYDiaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarHorariosXMedicoYFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarLineasRecetasMedicasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarLineasXIdRecetaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -639,7 +633,6 @@
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarRecetaMedicaXDNIoNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarRecetasMedicasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -727,9 +720,10 @@
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.especialidad.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-
+    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.generarReporteCitasDiaActualResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.generarReporteDemandaResponse.datasource">
-
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.horario.datasource">
@@ -750,7 +744,13 @@
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.insertarMedicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarBandejaDeMedicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarConsultoriosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarDiasxIdMedicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarHorariosResponse.datasource">
@@ -803,12 +803,6 @@
     </None>
     <None Include="Connected Services\RRHHWS\RRHHWS.wsdl" />
     <None Include="Connected Services\RRHHWS\RRHHWS.xsd">
-
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\RRHHWS\RRHHWS1.wsdl" />
-    <None Include="Connected Services\RRHHWS\RRHHWS1.xsd">
-
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
@@ -971,6 +965,25 @@
     <None Include="Resources\icono-del-usuario-mensaje-correo-sobre-electrónico-110413673-removebg-preview1.png" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
@@ -1000,25 +1013,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="AcroPDFLib">
-      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="AxAcroPDFLib">
-      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
