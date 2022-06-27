@@ -110,7 +110,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnEditar.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,7 +126,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnEliminar.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,7 +142,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnNuevo.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -178,7 +178,7 @@
             // 
             // btnVer
             // 
-            this.btnVer.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnVer.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnVer.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVer.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

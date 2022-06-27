@@ -83,6 +83,10 @@ namespace LP2Clinica
             if (!CerrandoSesion) Application.ExitThread();
         }
 
-        
+        private void btnRegistroRecetaMedica_Click(object sender, EventArgs e)
+        {
+            frmRegistroRecetaMedica recetaMedica = new frmRegistroRecetaMedica();
+            abrirFormulario(recetaMedica);
+        }
     }
 }

@@ -29,18 +29,21 @@
         private void InitializeComponent()
         {
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
+            this.txtResultado = new System.Windows.Forms.TextBox();
+            this.lblResultado = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.bnCancelar = new System.Windows.Forms.Button();
-            this.dtgReceta = new System.Windows.Forms.DataGridView();
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.dgvReceta = new System.Windows.Forms.DataGridView();
+            this.CodMedicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnBuscarDiagnostico = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.gbLineasReceta = new System.Windows.Forms.GroupBox();
+            this.btnBuscarProducto = new System.Windows.Forms.Button();
             this.btnResta = new System.Windows.Forms.Button();
             this.btnSuma = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.TextBox();
@@ -50,7 +53,10 @@
             this.lblProducto = new System.Windows.Forms.Label();
             this.lblCodigoProducto = new System.Windows.Forms.Label();
             this.pbReceta = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgReceta)).BeginInit();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.lblCodigoReceta = new System.Windows.Forms.Label();
+            this.txtCodigoReceta = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReceta)).BeginInit();
             this.gbLineasReceta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbReceta)).BeginInit();
             this.SuspendLayout();
@@ -68,26 +74,26 @@
             this.lblTitulo.TabIndex = 74;
             this.lblTitulo.Text = "REGISTRO DE RECETA MÉDICA";
             // 
-            // txtCodigo
+            // txtResultado
             // 
-            this.txtCodigo.BackColor = System.Drawing.Color.LightGray;
-            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCodigo.Location = new System.Drawing.Point(404, 171);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(179, 20);
-            this.txtCodigo.TabIndex = 22;
+            this.txtResultado.BackColor = System.Drawing.Color.LightGray;
+            this.txtResultado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtResultado.Location = new System.Drawing.Point(318, 145);
+            this.txtResultado.Name = "txtResultado";
+            this.txtResultado.Size = new System.Drawing.Size(144, 20);
+            this.txtResultado.TabIndex = 22;
             // 
-            // lblCodigo
+            // lblResultado
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.BackColor = System.Drawing.Color.Transparent;
-            this.lblCodigo.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.ForeColor = System.Drawing.Color.White;
-            this.lblCodigo.Location = new System.Drawing.Point(235, 167);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(172, 22);
-            this.lblCodigo.TabIndex = 21;
-            this.lblCodigo.Text = "Codigo de la Receta:";
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.BackColor = System.Drawing.Color.Transparent;
+            this.lblResultado.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado.ForeColor = System.Drawing.Color.White;
+            this.lblResultado.Location = new System.Drawing.Point(219, 143);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(93, 22);
+            this.lblResultado.TabIndex = 21;
+            this.lblResultado.Text = "Resultado:";
             // 
             // btnRegistrar
             // 
@@ -102,47 +108,56 @@
             this.btnRegistrar.TabIndex = 95;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // bnCancelar
+            // btnCancelar
             // 
-            this.bnCancelar.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.bnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.bnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bnCancelar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnCancelar.ForeColor = System.Drawing.Color.White;
-            this.bnCancelar.Location = new System.Drawing.Point(20, 447);
-            this.bnCancelar.Name = "bnCancelar";
-            this.bnCancelar.Size = new System.Drawing.Size(158, 33);
-            this.bnCancelar.TabIndex = 94;
-            this.bnCancelar.Text = "Cancelar";
-            this.bnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(20, 447);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(158, 33);
+            this.btnCancelar.TabIndex = 94;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // dtgReceta
+            // dgvReceta
             // 
-            this.dtgReceta.AllowUserToAddRows = false;
-            this.dtgReceta.BackgroundColor = System.Drawing.Color.AliceBlue;
-            this.dtgReceta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgReceta.GridColor = System.Drawing.Color.DarkTurquoise;
-            this.dtgReceta.Location = new System.Drawing.Point(20, 351);
-            this.dtgReceta.Name = "dtgReceta";
-            this.dtgReceta.RowHeadersWidth = 51;
-            this.dtgReceta.Size = new System.Drawing.Size(566, 90);
-            this.dtgReceta.TabIndex = 93;
+            this.dgvReceta.AllowUserToAddRows = false;
+            this.dgvReceta.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.dgvReceta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReceta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CodMedicamento,
+            this.Producto,
+            this.Cantidad});
+            this.dgvReceta.GridColor = System.Drawing.Color.DarkTurquoise;
+            this.dgvReceta.Location = new System.Drawing.Point(20, 351);
+            this.dgvReceta.Name = "dgvReceta";
+            this.dgvReceta.RowHeadersWidth = 51;
+            this.dgvReceta.Size = new System.Drawing.Size(566, 90);
+            this.dgvReceta.TabIndex = 93;
+            this.dgvReceta.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvReceta_CellFormatting);
             // 
-            // btnEditar
+            // CodMedicamento
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(209, 85);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(78, 29);
-            this.btnEditar.TabIndex = 92;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
+            this.CodMedicamento.HeaderText = "Codigo del medicamento";
+            this.CodMedicamento.Name = "CodMedicamento";
+            this.CodMedicamento.Width = 150;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Nombre del medicamento";
+            this.Producto.Name = "Producto";
+            this.Producto.Width = 250;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
             // 
             // btnEliminar
             // 
@@ -158,21 +173,23 @@
             this.btnEliminar.TabIndex = 91;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnNuevo
+            // btnBuscarDiagnostico
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(117, 85);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(84, 29);
-            this.btnNuevo.TabIndex = 90;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnBuscarDiagnostico.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.btnBuscarDiagnostico.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnBuscarDiagnostico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarDiagnostico.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarDiagnostico.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarDiagnostico.Location = new System.Drawing.Point(473, 118);
+            this.btnBuscarDiagnostico.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarDiagnostico.Name = "btnBuscarDiagnostico";
+            this.btnBuscarDiagnostico.Size = new System.Drawing.Size(113, 55);
+            this.btnBuscarDiagnostico.TabIndex = 90;
+            this.btnBuscarDiagnostico.Text = "Buscar Diagnóstico";
+            this.btnBuscarDiagnostico.UseVisualStyleBackColor = false;
+            this.btnBuscarDiagnostico.Click += new System.EventHandler(this.btnBuscarDiagnostico_Click);
             // 
             // btnBuscar
             // 
@@ -181,13 +198,14 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(295, 85);
+            this.btnBuscar.Location = new System.Drawing.Point(220, 85);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(84, 29);
+            this.btnBuscar.Size = new System.Drawing.Size(151, 29);
             this.btnBuscar.TabIndex = 99;
-            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Text = "Buscar Receta";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblID
             // 
@@ -195,7 +213,7 @@
             this.lblID.BackColor = System.Drawing.Color.Transparent;
             this.lblID.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.White;
-            this.lblID.Location = new System.Drawing.Point(235, 132);
+            this.lblID.Location = new System.Drawing.Point(219, 118);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(130, 22);
             this.lblID.TabIndex = 23;
@@ -205,14 +223,15 @@
             // 
             this.txtID.BackColor = System.Drawing.Color.LightGray;
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtID.Location = new System.Drawing.Point(404, 132);
+            this.txtID.Location = new System.Drawing.Point(355, 120);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(179, 20);
+            this.txtID.Size = new System.Drawing.Size(107, 20);
             this.txtID.TabIndex = 24;
             // 
             // gbLineasReceta
             // 
             this.gbLineasReceta.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.gbLineasReceta.Controls.Add(this.btnBuscarProducto);
             this.gbLineasReceta.Controls.Add(this.btnResta);
             this.gbLineasReceta.Controls.Add(this.btnSuma);
             this.gbLineasReceta.Controls.Add(this.txtCantidad);
@@ -229,6 +248,22 @@
             this.gbLineasReceta.TabStop = false;
             this.gbLineasReceta.Text = "Lineas de Receta médica";
             // 
+            // btnBuscarProducto
+            // 
+            this.btnBuscarProducto.BackColor = System.Drawing.Color.White;
+            this.btnBuscarProducto.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnBuscarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarProducto.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarProducto.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscarProducto.Location = new System.Drawing.Point(308, 59);
+            this.btnBuscarProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscarProducto.Name = "btnBuscarProducto";
+            this.btnBuscarProducto.Size = new System.Drawing.Size(43, 27);
+            this.btnBuscarProducto.TabIndex = 103;
+            this.btnBuscarProducto.Text = "...";
+            this.btnBuscarProducto.UseVisualStyleBackColor = false;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
+            // 
             // btnResta
             // 
             this.btnResta.Location = new System.Drawing.Point(498, 50);
@@ -237,6 +272,7 @@
             this.btnResta.TabIndex = 107;
             this.btnResta.Text = " -";
             this.btnResta.UseVisualStyleBackColor = true;
+            this.btnResta.Click += new System.EventHandler(this.btnResta_Click);
             // 
             // btnSuma
             // 
@@ -246,6 +282,7 @@
             this.btnSuma.TabIndex = 106;
             this.btnSuma.Text = " +";
             this.btnSuma.UseVisualStyleBackColor = true;
+            this.btnSuma.Click += new System.EventHandler(this.btnSuma_Click);
             // 
             // txtCantidad
             // 
@@ -315,6 +352,41 @@
             this.pbReceta.TabIndex = 101;
             this.pbReceta.TabStop = false;
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.White;
+            this.btnNuevo.Location = new System.Drawing.Point(122, 85);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(90, 29);
+            this.btnNuevo.TabIndex = 102;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // lblCodigoReceta
+            // 
+            this.lblCodigoReceta.AutoSize = true;
+            this.lblCodigoReceta.BackColor = System.Drawing.Color.Transparent;
+            this.lblCodigoReceta.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoReceta.ForeColor = System.Drawing.Color.White;
+            this.lblCodigoReceta.Location = new System.Drawing.Point(219, 204);
+            this.lblCodigoReceta.Name = "lblCodigoReceta";
+            this.lblCodigoReceta.Size = new System.Drawing.Size(152, 22);
+            this.lblCodigoReceta.TabIndex = 103;
+            this.lblCodigoReceta.Text = "Código de Receta:";
+            // 
+            // txtCodigoReceta
+            // 
+            this.txtCodigoReceta.Location = new System.Drawing.Point(377, 204);
+            this.txtCodigoReceta.Name = "txtCodigoReceta";
+            this.txtCodigoReceta.Size = new System.Drawing.Size(206, 20);
+            this.txtCodigoReceta.TabIndex = 108;
+            // 
             // frmRegistroRecetaMedica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,25 +394,27 @@
             this.BackgroundImage = global::LP2Clinica.Properties.Resources.PANTALLA_3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(595, 492);
+            this.Controls.Add(this.txtCodigoReceta);
+            this.Controls.Add(this.lblCodigoReceta);
+            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.pbReceta);
             this.Controls.Add(this.gbLineasReceta);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.lblID);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.txtResultado);
+            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.bnCancelar);
-            this.Controls.Add(this.dtgReceta);
-            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.dgvReceta);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.btnBuscarDiagnostico);
             this.Controls.Add(this.lblTitulo);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegistroRecetaMedica";
             this.Text = "Registrar Receta Medica";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgReceta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReceta)).EndInit();
             this.gbLineasReceta.ResumeLayout(false);
             this.gbLineasReceta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbReceta)).EndInit();
@@ -351,14 +425,13 @@
 
         #endregion
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.TextBox txtResultado;
+        private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Button bnCancelar;
-        private System.Windows.Forms.DataGridView dtgReceta;
-        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.DataGridView dgvReceta;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnBuscarDiagnostico;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txtID;
@@ -372,5 +445,12 @@
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.Label lblCodigoProducto;
         private System.Windows.Forms.PictureBox pbReceta;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnBuscarProducto;
+        private System.Windows.Forms.Label lblCodigoReceta;
+        private System.Windows.Forms.TextBox txtCodigoReceta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodMedicamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
     }
 }

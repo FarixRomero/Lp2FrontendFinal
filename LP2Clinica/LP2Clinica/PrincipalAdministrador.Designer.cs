@@ -55,9 +55,10 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.Location = new System.Drawing.Point(335, 0);
+            this.panelContenedor.Location = new System.Drawing.Point(251, 0);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(815, 654);
+            this.panelContenedor.Size = new System.Drawing.Size(611, 531);
             this.panelContenedor.TabIndex = 8;
             // 
             // Menú
@@ -82,16 +83,18 @@
             this.Menú.Controls.Add(this.pictureBox2);
             this.Menú.Controls.Add(this.pictureBox1);
             this.Menú.Location = new System.Drawing.Point(1, 1);
+            this.Menú.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Menú.Name = "Menú";
-            this.Menú.Size = new System.Drawing.Size(329, 793);
+            this.Menú.Size = new System.Drawing.Size(247, 644);
             this.Menú.TabIndex = 7;
             // 
             // btnMostrarDemanda
             // 
             this.btnMostrarDemanda.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnMostrarDemanda.Location = new System.Drawing.Point(29, 704);
+            this.btnMostrarDemanda.Location = new System.Drawing.Point(22, 572);
+            this.btnMostrarDemanda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMostrarDemanda.Name = "btnMostrarDemanda";
-            this.btnMostrarDemanda.Size = new System.Drawing.Size(267, 55);
+            this.btnMostrarDemanda.Size = new System.Drawing.Size(200, 45);
             this.btnMostrarDemanda.TabIndex = 34;
             this.btnMostrarDemanda.Text = "Mostrar Demanda Horarios";
             this.btnMostrarDemanda.UseVisualStyleBackColor = false;
@@ -100,9 +103,10 @@
             // btnAdministrarMedicamentos
             // 
             this.btnAdministrarMedicamentos.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnAdministrarMedicamentos.Location = new System.Drawing.Point(29, 582);
+            this.btnAdministrarMedicamentos.Location = new System.Drawing.Point(22, 473);
+            this.btnAdministrarMedicamentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministrarMedicamentos.Name = "btnAdministrarMedicamentos";
-            this.btnAdministrarMedicamentos.Size = new System.Drawing.Size(267, 55);
+            this.btnAdministrarMedicamentos.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarMedicamentos.TabIndex = 30;
             this.btnAdministrarMedicamentos.Text = "Administrar Medicamentos";
             this.btnAdministrarMedicamentos.UseVisualStyleBackColor = false;
@@ -112,9 +116,10 @@
             // 
             this.btnAdministrarUsuarios.BackColor = System.Drawing.Color.PowderBlue;
             this.btnAdministrarUsuarios.ImageKey = "(ninguno)";
-            this.btnAdministrarUsuarios.Location = new System.Drawing.Point(29, 643);
+            this.btnAdministrarUsuarios.Location = new System.Drawing.Point(22, 522);
+            this.btnAdministrarUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministrarUsuarios.Name = "btnAdministrarUsuarios";
-            this.btnAdministrarUsuarios.Size = new System.Drawing.Size(267, 55);
+            this.btnAdministrarUsuarios.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarUsuarios.TabIndex = 29;
             this.btnAdministrarUsuarios.Text = "Administrar Usuarios";
             this.btnAdministrarUsuarios.UseVisualStyleBackColor = false;
@@ -123,9 +128,10 @@
             // btnAdministrarEspecialidades
             // 
             this.btnAdministrarEspecialidades.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnAdministrarEspecialidades.Location = new System.Drawing.Point(29, 460);
+            this.btnAdministrarEspecialidades.Location = new System.Drawing.Point(22, 374);
+            this.btnAdministrarEspecialidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministrarEspecialidades.Name = "btnAdministrarEspecialidades";
-            this.btnAdministrarEspecialidades.Size = new System.Drawing.Size(267, 55);
+            this.btnAdministrarEspecialidades.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarEspecialidades.TabIndex = 28;
             this.btnAdministrarEspecialidades.Text = "Administrar Especialidades";
             this.btnAdministrarEspecialidades.UseVisualStyleBackColor = false;
@@ -135,9 +141,10 @@
             // 
             this.btnAdministrarHorariosMedicos.BackColor = System.Drawing.Color.PowderBlue;
             this.btnAdministrarHorariosMedicos.ImageKey = "(ninguno)";
-            this.btnAdministrarHorariosMedicos.Location = new System.Drawing.Point(29, 521);
+            this.btnAdministrarHorariosMedicos.Location = new System.Drawing.Point(22, 423);
+            this.btnAdministrarHorariosMedicos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministrarHorariosMedicos.Name = "btnAdministrarHorariosMedicos";
-            this.btnAdministrarHorariosMedicos.Size = new System.Drawing.Size(267, 55);
+            this.btnAdministrarHorariosMedicos.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarHorariosMedicos.TabIndex = 27;
             this.btnAdministrarHorariosMedicos.Text = "Administrar Horarios Medicos";
             this.btnAdministrarHorariosMedicos.UseVisualStyleBackColor = false;
@@ -146,9 +153,10 @@
             // btnAdministrarConsultorios
             // 
             this.btnAdministrarConsultorios.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnAdministrarConsultorios.Location = new System.Drawing.Point(29, 399);
+            this.btnAdministrarConsultorios.Location = new System.Drawing.Point(22, 324);
+            this.btnAdministrarConsultorios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministrarConsultorios.Name = "btnAdministrarConsultorios";
-            this.btnAdministrarConsultorios.Size = new System.Drawing.Size(267, 55);
+            this.btnAdministrarConsultorios.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarConsultorios.TabIndex = 26;
             this.btnAdministrarConsultorios.Text = "Administrar Consultorio";
             this.btnAdministrarConsultorios.UseVisualStyleBackColor = false;
@@ -156,17 +164,19 @@
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(332, 0);
+            this.panel2.Location = new System.Drawing.Point(249, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(815, 654);
+            this.panel2.Size = new System.Drawing.Size(611, 531);
             this.panel2.TabIndex = 8;
             // 
             // btnAdministrarPacientes
             // 
             this.btnAdministrarPacientes.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnAdministrarPacientes.Location = new System.Drawing.Point(29, 276);
+            this.btnAdministrarPacientes.Location = new System.Drawing.Point(22, 224);
+            this.btnAdministrarPacientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministrarPacientes.Name = "btnAdministrarPacientes";
-            this.btnAdministrarPacientes.Size = new System.Drawing.Size(267, 55);
+            this.btnAdministrarPacientes.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarPacientes.TabIndex = 25;
             this.btnAdministrarPacientes.Text = "Administrar Pacientes del día";
             this.btnAdministrarPacientes.UseVisualStyleBackColor = false;
@@ -176,9 +186,10 @@
             // 
             this.btnAdministrarMedicos.BackColor = System.Drawing.Color.PowderBlue;
             this.btnAdministrarMedicos.ImageKey = "(ninguno)";
-            this.btnAdministrarMedicos.Location = new System.Drawing.Point(29, 337);
+            this.btnAdministrarMedicos.Location = new System.Drawing.Point(22, 274);
+            this.btnAdministrarMedicos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministrarMedicos.Name = "btnAdministrarMedicos";
-            this.btnAdministrarMedicos.Size = new System.Drawing.Size(267, 55);
+            this.btnAdministrarMedicos.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarMedicos.TabIndex = 23;
             this.btnAdministrarMedicos.Text = "Administrar Medicos";
             this.btnAdministrarMedicos.UseVisualStyleBackColor = false;
@@ -187,9 +198,10 @@
             // btnAdministrarCitas
             // 
             this.btnAdministrarCitas.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnAdministrarCitas.Location = new System.Drawing.Point(29, 215);
+            this.btnAdministrarCitas.Location = new System.Drawing.Point(22, 175);
+            this.btnAdministrarCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdministrarCitas.Name = "btnAdministrarCitas";
-            this.btnAdministrarCitas.Size = new System.Drawing.Size(267, 55);
+            this.btnAdministrarCitas.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarCitas.TabIndex = 4;
             this.btnAdministrarCitas.Text = "Administrar Citas";
             this.btnAdministrarCitas.UseVisualStyleBackColor = false;
@@ -198,9 +210,10 @@
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(143, 159);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(107, 129);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(140, 31);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(105, 25);
             this.btnCerrarSesion.TabIndex = 22;
             this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
@@ -209,9 +222,10 @@
             // btnVerPerfil
             // 
             this.btnVerPerfil.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnVerPerfil.Location = new System.Drawing.Point(143, 122);
+            this.btnVerPerfil.Location = new System.Drawing.Point(107, 99);
+            this.btnVerPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVerPerfil.Name = "btnVerPerfil";
-            this.btnVerPerfil.Size = new System.Drawing.Size(140, 31);
+            this.btnVerPerfil.Size = new System.Drawing.Size(105, 25);
             this.btnVerPerfil.TabIndex = 21;
             this.btnVerPerfil.Text = "Ver Perfil";
             this.btnVerPerfil.UseVisualStyleBackColor = false;
@@ -223,10 +237,9 @@
             this.lblCambiarPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblCambiarPassword.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCambiarPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
-            this.lblCambiarPassword.Location = new System.Drawing.Point(146, 97);
-            this.lblCambiarPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCambiarPassword.Location = new System.Drawing.Point(110, 79);
             this.lblCambiarPassword.Name = "lblCambiarPassword";
-            this.lblCambiarPassword.Size = new System.Drawing.Size(107, 22);
+            this.lblCambiarPassword.Size = new System.Drawing.Size(85, 17);
             this.lblCambiarPassword.TabIndex = 20;
             this.lblCambiarPassword.Text = "Bienvenid@";
             // 
@@ -234,9 +247,10 @@
             // 
             this.pictureBox3.BackgroundImage = global::LP2Clinica.Properties.Resources.user3;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(29, 112);
+            this.pictureBox3.Location = new System.Drawing.Point(22, 91);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(108, 88);
+            this.pictureBox3.Size = new System.Drawing.Size(81, 72);
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
@@ -244,9 +258,10 @@
             // 
             this.pictureBox2.BackgroundImage = global::LP2Clinica.Properties.Resources.QHALI;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(49, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(37, 19);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(221, 42);
+            this.pictureBox2.Size = new System.Drawing.Size(166, 34);
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
@@ -254,27 +269,30 @@
             // 
             this.pictureBox1.BackgroundImage = global::LP2Clinica.Properties.Resources.bone_2;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 460);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 374);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(329, 312);
+            this.pictureBox1.Size = new System.Drawing.Size(247, 254);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // panelvisualizar
             // 
-            this.panelvisualizar.Location = new System.Drawing.Point(330, 0);
+            this.panelvisualizar.Location = new System.Drawing.Point(248, 0);
+            this.panelvisualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelvisualizar.Name = "panelvisualizar";
-            this.panelvisualizar.Size = new System.Drawing.Size(815, 794);
+            this.panelvisualizar.Size = new System.Drawing.Size(611, 645);
             this.panelvisualizar.TabIndex = 8;
             // 
             // PrincipalAdministrador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(64)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(1159, 798);
+            this.ClientSize = new System.Drawing.Size(869, 622);
             this.Controls.Add(this.panelvisualizar);
             this.Controls.Add(this.Menú);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PrincipalAdministrador";
             this.Text = "PrincipalClinica";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PrincipalClinica_FormClosed);
