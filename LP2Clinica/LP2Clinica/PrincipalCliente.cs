@@ -128,6 +128,11 @@ namespace LP2Clinica
             abrirFormulario(bandeja);
                 
         }
+
+        private void btnCOLA_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
