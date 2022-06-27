@@ -30,6 +30,7 @@
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.Menú = new System.Windows.Forms.Panel();
+            this.btnRegistroRecetaMedica = new System.Windows.Forms.Button();
             this.btBuscarPaciente = new System.Windows.Forms.Button();
             this.btnVerCitas = new System.Windows.Forms.Button();
             this.btnBuscarDiagnostico = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnRegistroRecetaMedica = new System.Windows.Forms.Button();
             this.Menú.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -77,6 +77,19 @@
             this.Menú.Size = new System.Drawing.Size(252, 531);
             this.Menú.TabIndex = 8;
             // 
+            // btnRegistroRecetaMedica
+            // 
+            this.btnRegistroRecetaMedica.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnRegistroRecetaMedica.ImageKey = "(ninguno)";
+            this.btnRegistroRecetaMedica.Location = new System.Drawing.Point(22, 413);
+            this.btnRegistroRecetaMedica.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistroRecetaMedica.Name = "btnRegistroRecetaMedica";
+            this.btnRegistroRecetaMedica.Size = new System.Drawing.Size(200, 45);
+            this.btnRegistroRecetaMedica.TabIndex = 37;
+            this.btnRegistroRecetaMedica.Text = "Registrar Receta Médica";
+            this.btnRegistroRecetaMedica.UseVisualStyleBackColor = false;
+            this.btnRegistroRecetaMedica.Click += new System.EventHandler(this.btnRegistroRecetaMedica_Click);
+            // 
             // btBuscarPaciente
             // 
             this.btBuscarPaciente.BackColor = System.Drawing.Color.PowderBlue;
@@ -88,6 +101,7 @@
             this.btBuscarPaciente.TabIndex = 36;
             this.btBuscarPaciente.Text = "Buscar Paciente";
             this.btBuscarPaciente.UseVisualStyleBackColor = false;
+            this.btBuscarPaciente.Click += new System.EventHandler(this.btBuscarPaciente_Click);
             // 
             // btnVerCitas
             // 
@@ -194,19 +208,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(247, 251);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnRegistroRecetaMedica
-            // 
-            this.btnRegistroRecetaMedica.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnRegistroRecetaMedica.ImageKey = "(ninguno)";
-            this.btnRegistroRecetaMedica.Location = new System.Drawing.Point(22, 413);
-            this.btnRegistroRecetaMedica.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRegistroRecetaMedica.Name = "btnRegistroRecetaMedica";
-            this.btnRegistroRecetaMedica.Size = new System.Drawing.Size(200, 45);
-            this.btnRegistroRecetaMedica.TabIndex = 37;
-            this.btnRegistroRecetaMedica.Text = "Registrar Receta Médica";
-            this.btnRegistroRecetaMedica.UseVisualStyleBackColor = false;
-            this.btnRegistroRecetaMedica.Click += new System.EventHandler(this.btnRegistroRecetaMedica_Click);
             // 
             // PrincipalMedico
             // 

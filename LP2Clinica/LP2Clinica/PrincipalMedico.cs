@@ -88,5 +88,10 @@ namespace LP2Clinica
             frmRegistroRecetaMedica recetaMedica = new frmRegistroRecetaMedica();
             abrirFormulario(recetaMedica);
         }
+
+        private void btBuscarPaciente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

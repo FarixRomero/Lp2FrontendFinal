@@ -113,6 +113,13 @@ namespace LP2Clinica
             Menú.Size = new Size(this.Width, this.Height);
 
         }
+
+        private void btnDiagnostico_Click(object sender, EventArgs e)
+        {
+            ImprimirDiagnostico formImprimirDiagnostico = new ImprimirDiagnostico();
+            formImprimirDiagnostico.SetPrincipal(this);
+            abrirFormulario(formImprimirDiagnostico);
+        }
     }
 
 }

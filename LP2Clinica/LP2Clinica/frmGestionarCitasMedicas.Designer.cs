@@ -42,9 +42,10 @@
             this.colIdMedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colIDCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sfdArchivo = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pbCita)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCita)).BeginInit();
             this.SuspendLayout();
@@ -105,6 +106,7 @@
             this.btnNuevo.TabIndex = 81;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnEliminar
             // 
@@ -124,18 +126,19 @@
             // 
             // btnReprogramar
             // 
-            this.btnReprogramar.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnReprogramar.BackColor = System.Drawing.Color.MediumTurquoise;
             this.btnReprogramar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnReprogramar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReprogramar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReprogramar.ForeColor = System.Drawing.Color.White;
-            this.btnReprogramar.Location = new System.Drawing.Point(423, 638);
+            this.btnReprogramar.Location = new System.Drawing.Point(494, 699);
             this.btnReprogramar.Margin = new System.Windows.Forms.Padding(4);
             this.btnReprogramar.Name = "btnReprogramar";
-            this.btnReprogramar.Size = new System.Drawing.Size(168, 37);
+            this.btnReprogramar.Size = new System.Drawing.Size(255, 41);
             this.btnReprogramar.TabIndex = 79;
-            this.btnReprogramar.Text = "Reprogramar";
+            this.btnReprogramar.Text = "Imprimir Citas de hoy";
             this.btnReprogramar.UseVisualStyleBackColor = false;
+            this.btnReprogramar.Click += new System.EventHandler(this.btnReprogramar_Click);
             // 
             // txtIngreso
             // 
@@ -214,6 +217,13 @@
             this.colIDCita.Name = "colIDCita";
             this.colIDCita.Width = 125;
             // 
+            // colEstado
+            // 
+            this.colEstado.HeaderText = "Estado ";
+            this.colEstado.MinimumWidth = 6;
+            this.colEstado.Name = "colEstado";
+            this.colEstado.Width = 125;
+            // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.BackColor = System.Drawing.Color.LightSeaGreen;
@@ -221,7 +231,7 @@
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(599, 638);
+            this.btnSeleccionar.Location = new System.Drawing.Point(423, 638);
             this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(159, 37);
@@ -244,13 +254,6 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // colEstado
-            // 
-            this.colEstado.HeaderText = "Estado ";
-            this.colEstado.MinimumWidth = 6;
-            this.colEstado.Name = "colEstado";
-            this.colEstado.Width = 125;
             // 
             // frmGestionarCitasMedicas
             // 
@@ -301,5 +304,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn colIDCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEstado;
+        private System.Windows.Forms.SaveFileDialog sfdArchivo;
     }
 }

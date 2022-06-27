@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Menú = new System.Windows.Forms.Panel();
+            this.btnDiagnostico = new System.Windows.Forms.Button();
             this.btnCalificar = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnVerPerfil = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@
             // 
             this.Menú.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(114)))));
             this.Menú.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Menú.Controls.Add(this.btnDiagnostico);
             this.Menú.Controls.Add(this.btnCalificar);
             this.Menú.Controls.Add(this.btnCerrarSesion);
             this.Menú.Controls.Add(this.btnVerPerfil);
@@ -61,16 +63,27 @@
             this.Menú.Controls.Add(this.pictureBox1);
             this.Menú.Controls.Add(this.btnReservarCita);
             this.Menú.Location = new System.Drawing.Point(2, 2);
-            this.Menú.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Menú.Margin = new System.Windows.Forms.Padding(2);
             this.Menú.Name = "Menú";
             this.Menú.Size = new System.Drawing.Size(247, 531);
             this.Menú.TabIndex = 0;
+            // 
+            // btnDiagnostico
+            // 
+            this.btnDiagnostico.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnDiagnostico.Location = new System.Drawing.Point(25, 411);
+            this.btnDiagnostico.Name = "btnDiagnostico";
+            this.btnDiagnostico.Size = new System.Drawing.Size(202, 44);
+            this.btnDiagnostico.TabIndex = 24;
+            this.btnDiagnostico.Text = "Imprimir diagnostico";
+            this.btnDiagnostico.UseVisualStyleBackColor = false;
+            this.btnDiagnostico.Click += new System.EventHandler(this.btnDiagnostico_Click);
             // 
             // btnCalificar
             // 
             this.btnCalificar.BackColor = System.Drawing.Color.PowderBlue;
             this.btnCalificar.Location = new System.Drawing.Point(25, 355);
-            this.btnCalificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCalificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalificar.Name = "btnCalificar";
             this.btnCalificar.Size = new System.Drawing.Size(200, 51);
             this.btnCalificar.TabIndex = 23;
@@ -82,7 +95,7 @@
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.PowderBlue;
             this.btnCerrarSesion.Location = new System.Drawing.Point(107, 129);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(105, 25);
             this.btnCerrarSesion.TabIndex = 22;
@@ -94,7 +107,7 @@
             // 
             this.btnVerPerfil.BackColor = System.Drawing.Color.PowderBlue;
             this.btnVerPerfil.Location = new System.Drawing.Point(107, 99);
-            this.btnVerPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerPerfil.Name = "btnVerPerfil";
             this.btnVerPerfil.Size = new System.Drawing.Size(105, 25);
             this.btnVerPerfil.TabIndex = 21;
@@ -119,7 +132,7 @@
             this.pictureBox3.BackgroundImage = global::LP2Clinica.Properties.Resources.user3;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(22, 91);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(81, 72);
             this.pictureBox3.TabIndex = 7;
@@ -130,7 +143,7 @@
             this.btnBuscarMedico.BackColor = System.Drawing.Color.PowderBlue;
             this.btnBuscarMedico.ImageKey = "(ninguno)";
             this.btnBuscarMedico.Location = new System.Drawing.Point(25, 243);
-            this.btnBuscarMedico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarMedico.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarMedico.Name = "btnBuscarMedico";
             this.btnBuscarMedico.Size = new System.Drawing.Size(200, 51);
             this.btnBuscarMedico.TabIndex = 6;
@@ -143,7 +156,7 @@
             this.pictureBox2.BackgroundImage = global::LP2Clinica.Properties.Resources.QHALI;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(37, 19);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(166, 34);
             this.pictureBox2.TabIndex = 5;
@@ -153,7 +166,7 @@
             // 
             this.btnModificarCuenta.BackColor = System.Drawing.Color.PowderBlue;
             this.btnModificarCuenta.Location = new System.Drawing.Point(25, 299);
-            this.btnModificarCuenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificarCuenta.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificarCuenta.Name = "btnModificarCuenta";
             this.btnModificarCuenta.Size = new System.Drawing.Size(200, 51);
             this.btnModificarCuenta.TabIndex = 4;
@@ -166,7 +179,7 @@
             this.pictureBox1.BackgroundImage = global::LP2Clinica.Properties.Resources.bone_2;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(0, 280);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(247, 251);
             this.pictureBox1.TabIndex = 3;
@@ -176,7 +189,7 @@
             // 
             this.btnReservarCita.BackColor = System.Drawing.Color.PowderBlue;
             this.btnReservarCita.Location = new System.Drawing.Point(25, 187);
-            this.btnReservarCita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReservarCita.Margin = new System.Windows.Forms.Padding(2);
             this.btnReservarCita.Name = "btnReservarCita";
             this.btnReservarCita.Size = new System.Drawing.Size(200, 51);
             this.btnReservarCita.TabIndex = 1;
@@ -187,7 +200,7 @@
             // panelContenedor
             // 
             this.panelContenedor.Location = new System.Drawing.Point(248, 3);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(611, 531);
             this.panelContenedor.TabIndex = 6;
@@ -201,7 +214,7 @@
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.Menú);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PrincipalCliente";
             this.ShowIcon = false;
             this.Text = "Menú";
@@ -230,5 +243,6 @@
         private System.Windows.Forms.Button btnVerPerfil;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnCalificar;
+        private System.Windows.Forms.Button btnDiagnostico;
     }
 }
