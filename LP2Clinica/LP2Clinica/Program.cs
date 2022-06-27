@@ -13,6 +13,15 @@ namespace LP2Clinica
         static void Main()
         {
             Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(true);
+            Application.Run(new frmGenerarDiagnostico());
+
+        }
+        
+        /*
+        static void Main()
+        {
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmInicio comienzo = new frmInicio();
             comienzo.FormClosed += INICIO_Closed;
@@ -32,5 +41,6 @@ namespace LP2Clinica
                 Application.OpenForms[0].FormClosed += INICIO_Closed;
             }
         }
+        */
     }
 }
