@@ -148,6 +148,7 @@ namespace LP2Clinica
         //Seleccionar
         private void button1_Click(object sender, EventArgs e)
         {
+            
             if ((dgvMedicos.SelectedRows.Count != 1))
             {
                 MessageBox.Show("Debe seleccionar Medico", "Mensaje de recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -169,7 +170,7 @@ namespace LP2Clinica
 
             }
        
-
+            
         }
 
         private void dgvHora_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -256,6 +257,7 @@ namespace LP2Clinica
 
         private void cbFecha_SelectedIndexChanged(object sender, EventArgs e)
         {
+            /*
             String fechaSeleccionadaFormato = DateTime.ParseExact((String)cbFecha.SelectedItem, "dd/MM/yyyy", null).ToString("yyyy-MM-dd");
             GestionMedicaWS.horario[] horarios = daoGestionMedica.listarHorariosXMedicoYFecha(_medSelc.id_medico, diaSeleccionado, fechaSeleccionadaFormato);
             if (horarios != null)
@@ -264,6 +266,7 @@ namespace LP2Clinica
                 horariosXDia = new BindingList<GestionMedicaWS.horario>();
             dgvHora.DataSource = horariosXDia;
             //DateTime.ParseExact((String)cbFecha.SelectedItem, "dd/MM/yyyy", null);
+            */
         }
     }
 }

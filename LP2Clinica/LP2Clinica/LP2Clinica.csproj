@@ -306,12 +306,6 @@
     <Compile Include="frmBuscarDiagnostico.Designer.cs">
       <DependentUpon>frmBuscarDiagnostico.cs</DependentUpon>
     </Compile>
-    <Compile Include="modificardatosmedicos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="modificardatosmedicos.Designer.cs">
-      <DependentUpon>modificardatosmedicos.cs</DependentUpon>
-    </Compile>
     <Compile Include="NuevoRegistroDeterminarTipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -462,9 +456,6 @@
     <EmbeddedResource Include="frmBuscarDiagnostico.resx">
       <DependentUpon>frmBuscarDiagnostico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modificardatosmedicos.resx">
-      <DependentUpon>modificardatosmedicos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="NuevoRegistroDeterminarTipo.resx">
       <DependentUpon>NuevoRegistroDeterminarTipo.cs</DependentUpon>
     </EmbeddedResource>
@@ -547,6 +538,9 @@
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.eliminarRecetaMedicaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.generarReporteDiagnosticoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.historialClinico.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -608,6 +602,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarHorariosXMedicoYDiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarHorariosXMedicoYFechaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarLineasRecetasMedicasResponse.datasource">
@@ -709,6 +706,9 @@
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.especialidad.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.generarReporteCitasDiaActualResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.generarReporteDemandaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -730,7 +730,13 @@
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.insertarMedicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarBandejaDeMedicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarConsultoriosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarDiasxIdMedicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarHorariosResponse.datasource">
