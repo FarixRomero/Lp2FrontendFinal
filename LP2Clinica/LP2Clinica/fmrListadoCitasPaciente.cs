@@ -60,8 +60,8 @@ namespace LP2Clinica
         {
             _citaSeleccionada = new GestionMedicaWS.citaMedica();
             _citaSeleccionada = (GestionMedicaWS.citaMedica)dtgCitas.CurrentRow.DataBoundItem;
-            frmMostrarDiagnostico formMostrarDiagnostico = new frmMostrarDiagnostico();
-            //formMostrarDiagnostico.IdCita = _citaSeleccionada.id_cita;
+            frmMostrarDiagnostico formMostrarDiagnostico = new frmMostrarDiagnostico(_citaSeleccionada.id_cita);
+            formMostrarDiagnostico.IdCita = _citaSeleccionada.id_cita;
             if (formMostrarDiagnostico.ShowDialog() == DialogResult.OK)
             {
                 GestionMedicaWS.citaMedica[] citaMedica = daoGestionMedica.buscarCitaXPaciente(IdPaciente);
@@ -70,6 +70,18 @@ namespace LP2Clinica
                     dtgCitas.DataSource =
                         new BindingList<GestionMedicaWS.citaMedica>(citaMedica.ToList());
                 }
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro que deseas salir de Gestion citas medicas?",
+               "Mensaje de Confirmación", MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                Principal.Show();
+                this.Close();
             }
         }
     }

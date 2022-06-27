@@ -48,13 +48,14 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(65, 571);
+            this.btnCancelar.Location = new System.Drawing.Point(39, 553);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(211, 41);
             this.btnCancelar.TabIndex = 102;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblTitulo
             // 
@@ -76,10 +77,10 @@
             this.btnDiagnostico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDiagnostico.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDiagnostico.ForeColor = System.Drawing.Color.White;
-            this.btnDiagnostico.Location = new System.Drawing.Point(575, 571);
+            this.btnDiagnostico.Location = new System.Drawing.Point(494, 553);
             this.btnDiagnostico.Margin = new System.Windows.Forms.Padding(4);
             this.btnDiagnostico.Name = "btnDiagnostico";
-            this.btnDiagnostico.Size = new System.Drawing.Size(181, 39);
+            this.btnDiagnostico.Size = new System.Drawing.Size(247, 39);
             this.btnDiagnostico.TabIndex = 100;
             this.btnDiagnostico.Text = "Ver diagnostico";
             this.btnDiagnostico.UseVisualStyleBackColor = false;
@@ -87,6 +88,7 @@
             // 
             // dtgCitas
             // 
+            this.dtgCitas.AllowUserToAddRows = false;
             this.dtgCitas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dtgCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -94,7 +96,7 @@
             this.colDoctor,
             this.colFecha,
             this.colEstado});
-            this.dtgCitas.Location = new System.Drawing.Point(65, 139);
+            this.dtgCitas.Location = new System.Drawing.Point(39, 128);
             this.dtgCitas.Margin = new System.Windows.Forms.Padding(4);
             this.dtgCitas.Name = "dtgCitas";
             this.dtgCitas.RowHeadersWidth = 51;
@@ -109,7 +111,7 @@
             this.lblCitas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(37)))), ((int)(((byte)(91)))));
             this.lblCitas.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCitas.ForeColor = System.Drawing.Color.White;
-            this.lblCitas.Location = new System.Drawing.Point(67, 58);
+            this.lblCitas.Location = new System.Drawing.Point(30, 31);
             this.lblCitas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCitas.Name = "lblCitas";
             this.lblCitas.Size = new System.Drawing.Size(312, 51);
@@ -150,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LP2Clinica.Properties.Resources.PANTALLA_3;
-            this.ClientSize = new System.Drawing.Size(866, 649);
+            this.ClientSize = new System.Drawing.Size(797, 607);
             this.Controls.Add(this.lblCitas);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblTitulo);

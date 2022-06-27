@@ -34,6 +34,25 @@ namespace LP2Clinica
             }
         }
 
+        public frmMostrarDiagnostico(int _id)
+        {
+            InitializeComponent();
+            daoGestionMedica = new GestionMedicaWS.GestionMedicaWSClient();
+            _idCita = _id;
+            GestionMedicaWS.diagnostico diagnostico = daoGestionMedica.buscarDiagnosticoPorIdCita(IdCita);
+            lblCodigoDiagnostico.Text = diagnostico.id_diagnostico.ToString();
+            lblResultadoDiagnostico.Text = diagnostico.resultado;
+            lblObservacionDiagnostico.Text = diagnostico.observacion;
+
+            GestionMedicaWS.lineaRecetaMedica[] lrm = daoGestionMedica.buscarRecetaMedicaXIdCita(IdCita);
+            dtgRecetaMedicaXDiagnostico.AutoGenerateColumns = false;
+            if (lrm != null && lrm.Length > 0)
+            {
+                dtgRecetaMedicaXDiagnostico.DataSource =
+                    new BindingList<GestionMedicaWS.lineaRecetaMedica>(lrm.ToList());
+            }
+        }
+
         public void SetPrincipal(PrincipalCliente principal)
         {
             Principal = principal;
@@ -49,6 +68,17 @@ namespace LP2Clinica
             dtgRecetaMedicaXDiagnostico.Rows[e.RowIndex].Cells[0].Value = lrm.medicamento.codigo;
             dtgRecetaMedicaXDiagnostico.Rows[e.RowIndex].Cells[1].Value = lrm.medicamento.nombre;
             dtgRecetaMedicaXDiagnostico.Rows[e.RowIndex].Cells[2].Value = lrm.cantidad;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Está seguro que deseas salir de Gestion citas medicas?",
+               "Mensaje de Confirmación", MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }
