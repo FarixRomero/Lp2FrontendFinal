@@ -40,6 +40,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReservarCita = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnDiagnostico = new System.Windows.Forms.Button();
             this.Menú.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -50,6 +51,7 @@
             // 
             this.Menú.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(114)))));
             this.Menú.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Menú.Controls.Add(this.btnDiagnostico);
             this.Menú.Controls.Add(this.btnCalificar);
             this.Menú.Controls.Add(this.btnCerrarSesion);
             this.Menú.Controls.Add(this.btnVerPerfil);
@@ -182,6 +184,17 @@
             this.panelContenedor.Size = new System.Drawing.Size(815, 654);
             this.panelContenedor.TabIndex = 6;
             // 
+            // btnDiagnostico
+            // 
+            this.btnDiagnostico.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnDiagnostico.Location = new System.Drawing.Point(33, 506);
+            this.btnDiagnostico.Name = "btnDiagnostico";
+            this.btnDiagnostico.Size = new System.Drawing.Size(267, 63);
+            this.btnDiagnostico.TabIndex = 24;
+            this.btnDiagnostico.Text = "Imprimir diagnostico";
+            this.btnDiagnostico.UseVisualStyleBackColor = false;
+            this.btnDiagnostico.Click += new System.EventHandler(this.btnDiagnostico_Click);
+            // 
             // PrincipalCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -219,5 +232,6 @@
         private System.Windows.Forms.Button btnVerPerfil;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnCalificar;
+        private System.Windows.Forms.Button btnDiagnostico;
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,9 @@ namespace LP2Clinica
         private PrincipalAdministrador Principal = null;
         private GestionMedicaWS.citaMedica _citaSeleccionada;
         private GestionMedicaWS.GestionMedicaWSClient daoGestionMedica;
+        private RRHHWS.RRHHWSClient daoRRHH;
         private RRHHWS.administrador _administrador;
+        private byte[] arreglo;
 
         public administrador Administrador { get => _administrador; set => _administrador = value; }
 
@@ -28,6 +31,7 @@ namespace LP2Clinica
         {
             InitializeComponent();
             daoGestionMedica = new GestionMedicaWS.GestionMedicaWSClient();
+            daoRRHH =  new RRHHWS.RRHHWSClient();
             dtgCita.AutoGenerateColumns = false;
         }
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -98,6 +102,29 @@ namespace LP2Clinica
                         MessageBox.Show("Ha ocurrido un error con la eliminación", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnReprogramar_Click(object sender, EventArgs e)
+        {
+            if (sfdArchivo.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    String archivoGenerar = sfdArchivo.FileName;
+                    arreglo = daoRRHH.generarReporteCitasDiaActual(_administrador.id_administrador);
+                    File.WriteAllBytes(archivoGenerar, arreglo);
+                    MessageBox.Show("Se ha guardado el archivo", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Se ha generado un error al momento de guardar el archivo", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
