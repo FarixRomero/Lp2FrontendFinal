@@ -504,6 +504,9 @@
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarCitaMedicaPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarCitaXPacienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarDiagnosticoPorIdCitaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -514,6 +517,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarPacientePorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarRecetaMedicaXIdCitaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.chat.datasource">

@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Foto.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="Nombre_Completo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -127,7 +124,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAwAAAOJCAYAAACZObCTAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAlolJREFUeF7t/Xe7HEWaL2qfq3J9lUFCBkkID8K7Bhrad8+0BMgLJxDem2Z6enr2
+        DQAACw0B7QfALAAAlolJREFUeF7t/Xe7HEWaL2qfq3J9lUFCBkkID8K7Bhrad8+0BMgLJxDem2Z6enr2
         bPee9/vWiSdy1UKQIWmtyoysyqr7j/vasxuozEpTK+IXT0T8Pzv/8tc5AAAAwM0EBgAAAECHwAAAAADo
         EBgAAAAAHQIDAAAAoENgAAAAAHQIDAAAAIAOgQEAAADQITAAAAAAOgQGAAAAQIfAAAAAAOgQGAAAAAAd
         AgMAAACgQ2AAAAAAdAgMAAAAgA6BAQAAANAhMAAAAAA6BAYAAABAh8AAAAAA6BAYAAAAAB0CAwAAAKBD

@@ -94,7 +94,6 @@ namespace LP2Clinica
                     nuevomensaje.medico.apellido = contacto_.apellido;
                     nuevomensaje.medico.username = contacto_.username;
 
-
                     nuevomensaje.paciente.foto = _paciente.foto;
                     nuevomensaje.paciente.id_paciente = _paciente.id_paciente;
                     nuevomensaje.paciente.nombre = _paciente.nombre;
@@ -102,7 +101,7 @@ namespace LP2Clinica
                     nuevomensaje.paciente.username = _paciente.username;
 
                 }
-                //nuevomensaje.fecha = DateTime.Now;
+                nuevomensaje.fecha = DateTime.Now.ToString("yyyy-MM-dd  hh:mm:tt");
 
                 daoGestionMedica.insertarChat(nuevomensaje);
             }
@@ -166,11 +165,17 @@ namespace LP2Clinica
             RRHHWS.usuario bandeja = (RRHHWS.usuario)dgvBandeja.Rows[e.RowIndex].DataBoundItem;
             if (bandeja != null)
             {
-                dgvBandeja.Rows[e.RowIndex].Cells[0].Value = bandeja.foto;
-                dgvBandeja.Rows[e.RowIndex].Cells[1].Value = bandeja.nombre + " " + bandeja.apellido;
-                 
-                 activar = 0;
+                //dgvBandeja.Rows[e.RowIndex].Cells[0].Value = bandeja.foto;
+                //dgvBandeja.Rows[e.RowIndex].Cells[1].Value = bandeja.nombre + " " + bandeja.apellido;
+                dgvBandeja.Rows[e.RowIndex].Cells[0].Value = bandeja.nombre + " " + bandeja.apellido;
+
+                activar = 0;
             }
+        }
+
+        private void dgvBandeja_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
