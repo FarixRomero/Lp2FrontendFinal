@@ -9,14 +9,17 @@ namespace LP2Clinica
     internal static class Program
     {
         [STAThread]
-        
-        //static void Main()
-        //{
-        //    Application.EnableVisualStyles();
-        //    Application.SetCompatibleTextRenderingDefault(true);
-        //    Application.Run(new frmGenerarDiagnostico());
 
-        //}
+        /*
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(true);
+            Application.Run(new frmGestionarCitasMedicas());
+
+        }
+        */
+
         
         static void Main()
         {
@@ -40,5 +43,6 @@ namespace LP2Clinica
                 Application.OpenForms[0].FormClosed += INICIO_Closed;
             }
         }
+
     }
 }

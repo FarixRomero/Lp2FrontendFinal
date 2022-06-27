@@ -324,12 +324,6 @@
     <Compile Include="ImprimirDiagnostico.Designer.cs">
       <DependentUpon>ImprimirDiagnostico.cs</DependentUpon>
     </Compile>
-    <Compile Include="modificardatosmedicos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="modificardatosmedicos.Designer.cs">
-      <DependentUpon>modificardatosmedicos.cs</DependentUpon>
-    </Compile>
     <Compile Include="NuevoRegistroDeterminarTipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -485,9 +479,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImprimirDiagnostico.resx">
       <DependentUpon>ImprimirDiagnostico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="modificardatosmedicos.resx">
-      <DependentUpon>modificardatosmedicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoRegistroDeterminarTipo.resx">
       <DependentUpon>NuevoRegistroDeterminarTipo.cs</DependentUpon>
