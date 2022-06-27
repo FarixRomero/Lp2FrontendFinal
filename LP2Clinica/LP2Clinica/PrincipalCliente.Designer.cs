@@ -33,13 +33,14 @@
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnVerPerfil = new System.Windows.Forms.Button();
             this.lblCambiarPassword = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnBuscarMedico = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnModificarCuenta = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReservarCita = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnChats = new System.Windows.Forms.Button();
             this.Menú.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -50,6 +51,7 @@
             // 
             this.Menú.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(114)))));
             this.Menú.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Menú.Controls.Add(this.btnChats);
             this.Menú.Controls.Add(this.btnCalificar);
             this.Menú.Controls.Add(this.btnCerrarSesion);
             this.Menú.Controls.Add(this.btnVerPerfil);
@@ -111,16 +113,6 @@
             this.lblCambiarPassword.TabIndex = 20;
             this.lblCambiarPassword.Text = "Bienvenid@";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::LP2Clinica.Properties.Resources.user3;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(29, 112);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(108, 88);
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
             // btnBuscarMedico
             // 
             this.btnBuscarMedico.BackColor = System.Drawing.Color.PowderBlue;
@@ -133,16 +125,6 @@
             this.btnBuscarMedico.UseVisualStyleBackColor = false;
             this.btnBuscarMedico.Click += new System.EventHandler(this.btnBuscarMedico_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::LP2Clinica.Properties.Resources.QHALI;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(49, 23);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(221, 42);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
             // btnModificarCuenta
             // 
             this.btnModificarCuenta.BackColor = System.Drawing.Color.PowderBlue;
@@ -153,16 +135,6 @@
             this.btnModificarCuenta.Text = "Modificar datos";
             this.btnModificarCuenta.UseVisualStyleBackColor = false;
             this.btnModificarCuenta.Click += new System.EventHandler(this.btnModificarCuenta_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::LP2Clinica.Properties.Resources.bone_2;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 344);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(329, 309);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // btnReservarCita
             // 
@@ -181,6 +153,49 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(815, 654);
             this.panelContenedor.TabIndex = 6;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::LP2Clinica.Properties.Resources.user3;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(29, 112);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(108, 88);
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::LP2Clinica.Properties.Resources.QHALI;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(49, 23);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(221, 42);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::LP2Clinica.Properties.Resources.bone_2;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 344);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(329, 309);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnChats
+            // 
+            this.btnChats.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnChats.ImageKey = "(ninguno)";
+            this.btnChats.Location = new System.Drawing.Point(33, 505);
+            this.btnChats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnChats.Name = "btnChats";
+            this.btnChats.Size = new System.Drawing.Size(267, 63);
+            this.btnChats.TabIndex = 38;
+            this.btnChats.Text = "Chats";
+            this.btnChats.UseVisualStyleBackColor = false;
+            this.btnChats.Click += new System.EventHandler(this.btnChats_Click);
             // 
             // PrincipalCliente
             // 
@@ -219,5 +234,6 @@
         private System.Windows.Forms.Button btnVerPerfil;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnCalificar;
+        private System.Windows.Forms.Button btnChats;
     }
 }

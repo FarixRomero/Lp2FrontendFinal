@@ -83,6 +83,16 @@ namespace LP2Clinica
             if (!CerrandoSesion) Application.ExitThread();
         }
 
-        
+        private void btnChats_Click(object sender, EventArgs e)
+        {
+            FrmBandejadeEntrada bandeja = new FrmBandejadeEntrada(medico,null); 
+            abrirFormulario(bandeja);
+            
+        }
+
+        private void btBuscarPaciente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

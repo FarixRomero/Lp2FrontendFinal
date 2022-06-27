@@ -113,6 +113,12 @@ namespace LP2Clinica
             Menú.Size = new Size(this.Width, this.Height);
 
         }
+
+        private void btnChats_Click(object sender, EventArgs e)
+        {
+            FrmBandejadeEntrada bandeja = new FrmBandejadeEntrada(null, paciente); 
+            abrirFormulario(bandeja);
+        }
     }
 
 }
