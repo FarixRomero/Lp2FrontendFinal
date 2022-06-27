@@ -42,12 +42,14 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvFechas = new System.Windows.Forms.DataGridView();
+            this.dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvHora = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbDias = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSelecMed = new System.Windows.Forms.Button();
+            this.btnSelectFecha = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFechas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHora)).BeginInit();
@@ -59,7 +61,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Tw Cen MT Condensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(20, 24);
+            this.lblTitulo.Location = new System.Drawing.Point(20, 9);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(200, 44);
@@ -70,7 +72,7 @@
             // 
             this.cbEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEspecialidad.FormattingEnabled = true;
-            this.cbEspecialidad.Location = new System.Drawing.Point(206, 94);
+            this.cbEspecialidad.Location = new System.Drawing.Point(206, 76);
             this.cbEspecialidad.Name = "cbEspecialidad";
             this.cbEspecialidad.Size = new System.Drawing.Size(300, 28);
             this.cbEspecialidad.TabIndex = 92;
@@ -81,7 +83,7 @@
             this.lblSeleccionarEspecialidad.BackColor = System.Drawing.Color.Transparent;
             this.lblSeleccionarEspecialidad.Font = new System.Drawing.Font("Tw Cen MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeleccionarEspecialidad.ForeColor = System.Drawing.Color.White;
-            this.lblSeleccionarEspecialidad.Location = new System.Drawing.Point(31, 97);
+            this.lblSeleccionarEspecialidad.Location = new System.Drawing.Point(31, 79);
             this.lblSeleccionarEspecialidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSeleccionarEspecialidad.Name = "lblSeleccionarEspecialidad";
             this.lblSeleccionarEspecialidad.Size = new System.Drawing.Size(168, 22);
@@ -94,7 +96,7 @@
             this.lblSeleccionar.BackColor = System.Drawing.Color.Transparent;
             this.lblSeleccionar.Font = new System.Drawing.Font("Tw Cen MT Condensed", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.lblSeleccionar.Location = new System.Drawing.Point(31, 131);
+            this.lblSeleccionar.Location = new System.Drawing.Point(31, 111);
             this.lblSeleccionar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSeleccionar.Name = "lblSeleccionar";
             this.lblSeleccionar.Size = new System.Drawing.Size(131, 22);
@@ -107,7 +109,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(24, 294);
+            this.label2.Location = new System.Drawing.Point(24, 346);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 22);
@@ -120,7 +122,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(317, 379);
+            this.label3.Location = new System.Drawing.Point(317, 414);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 22);
@@ -134,7 +136,7 @@
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(425, 520);
+            this.btnRegistrar.Location = new System.Drawing.Point(425, 555);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(158, 33);
             this.btnRegistrar.TabIndex = 102;
@@ -149,7 +151,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(28, 520);
+            this.btnCancelar.Location = new System.Drawing.Point(28, 555);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(158, 33);
             this.btnCancelar.TabIndex = 101;
@@ -164,7 +166,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(494, 132);
+            this.btnBuscar.Location = new System.Drawing.Point(308, 164);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(88, 29);
@@ -176,7 +178,7 @@
             // txtSeleccionar
             // 
             this.txtSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSeleccionar.Location = new System.Drawing.Point(190, 134);
+            this.txtSeleccionar.Location = new System.Drawing.Point(206, 111);
             this.txtSeleccionar.Name = "txtSeleccionar";
             this.txtSeleccionar.Size = new System.Drawing.Size(300, 26);
             this.txtSeleccionar.TabIndex = 107;
@@ -188,14 +190,15 @@
             this.dgvMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.nomb});
-            this.dgvMedicos.Location = new System.Drawing.Point(28, 166);
+            this.dgvMedicos.Location = new System.Drawing.Point(28, 209);
             this.dgvMedicos.MultiSelect = false;
             this.dgvMedicos.Name = "dgvMedicos";
             this.dgvMedicos.RowHeadersWidth = 51;
             this.dgvMedicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMedicos.Size = new System.Drawing.Size(555, 125);
+            this.dgvMedicos.Size = new System.Drawing.Size(536, 125);
             this.dgvMedicos.TabIndex = 123;
             this.dgvMedicos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMedicos_CellFormatting);
+            this.dgvMedicos.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMedicos_RowEnter);
             // 
             // Id
             // 
@@ -213,7 +216,9 @@
             // 
             this.dgvFechas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvFechas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFechas.Location = new System.Drawing.Point(28, 404);
+            this.dgvFechas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dia});
+            this.dgvFechas.Location = new System.Drawing.Point(28, 439);
             this.dgvFechas.MultiSelect = false;
             this.dgvFechas.Name = "dgvFechas";
             this.dgvFechas.RowHeadersWidth = 51;
@@ -222,6 +227,11 @@
             this.dgvFechas.TabIndex = 124;
             this.dgvFechas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFechas_CellFormatting);
             // 
+            // dia
+            // 
+            this.dia.HeaderText = "Fecha";
+            this.dia.Name = "dia";
+            // 
             // dgvHora
             // 
             this.dgvHora.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -229,7 +239,7 @@
             this.dgvHora.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.dgvHora.Location = new System.Drawing.Point(321, 404);
+            this.dgvHora.Location = new System.Drawing.Point(321, 439);
             this.dgvHora.MultiSelect = false;
             this.dgvHora.Name = "dgvHora";
             this.dgvHora.RowHeadersWidth = 51;
@@ -252,10 +262,11 @@
             // 
             this.cbDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDias.FormattingEnabled = true;
-            this.cbDias.Location = new System.Drawing.Point(28, 319);
+            this.cbDias.Location = new System.Drawing.Point(28, 371);
             this.cbDias.Name = "cbDias";
             this.cbDias.Size = new System.Drawing.Size(241, 28);
             this.cbDias.TabIndex = 126;
+            this.cbDias.SelectedIndexChanged += new System.EventHandler(this.cbDias_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -263,27 +274,42 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(24, 379);
+            this.label1.Location = new System.Drawing.Point(24, 414);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 22);
             this.label1.TabIndex = 127;
             this.label1.Text = "Seleccione fecha";
             // 
-            // button1
+            // btnSelecMed
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(424, 316);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 33);
-            this.button1.TabIndex = 128;
-            this.button1.Text = "Seleccionar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSelecMed.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnSelecMed.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnSelecMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelecMed.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelecMed.ForeColor = System.Drawing.Color.White;
+            this.btnSelecMed.Location = new System.Drawing.Point(412, 162);
+            this.btnSelecMed.Name = "btnSelecMed";
+            this.btnSelecMed.Size = new System.Drawing.Size(152, 31);
+            this.btnSelecMed.TabIndex = 128;
+            this.btnSelecMed.Text = "Seleccionar";
+            this.btnSelecMed.UseVisualStyleBackColor = false;
+            this.btnSelecMed.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnSelectFecha
+            // 
+            this.btnSelectFecha.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnSelectFecha.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnSelectFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectFecha.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectFecha.ForeColor = System.Drawing.Color.White;
+            this.btnSelectFecha.Location = new System.Drawing.Point(216, 556);
+            this.btnSelectFecha.Name = "btnSelectFecha";
+            this.btnSelectFecha.Size = new System.Drawing.Size(152, 31);
+            this.btnSelectFecha.TabIndex = 130;
+            this.btnSelectFecha.Text = "Seleccionar";
+            this.btnSelectFecha.UseVisualStyleBackColor = false;
+            this.btnSelectFecha.Click += new System.EventHandler(this.btnSelecFecha_Click);
             // 
             // frmRegistrarCitaMedica
             // 
@@ -291,8 +317,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(114)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(595, 574);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(635, 623);
+            this.Controls.Add(this.btnSelectFecha);
+            this.Controls.Add(this.btnSelecMed);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbDias);
             this.Controls.Add(this.dgvHora);
@@ -338,8 +365,10 @@
         private System.Windows.Forms.DataGridView dgvHora;
         private System.Windows.Forms.ComboBox cbDias;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSelecMed;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dia;
+        private System.Windows.Forms.Button btnSelectFecha;
     }
 }
