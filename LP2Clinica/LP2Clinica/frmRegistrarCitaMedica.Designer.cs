@@ -41,17 +41,16 @@
             this.dgvMedicos = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomb = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvFechas = new System.Windows.Forms.DataGridView();
-            this.dia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvHora = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbDias = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSelecMed = new System.Windows.Forms.Button();
-            this.btnSelectFecha = new System.Windows.Forms.Button();
+            this.cbFecha = new System.Windows.Forms.ComboBox();
+            this.lblSel = new System.Windows.Forms.Label();
+            this.txtMedSel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFechas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHora)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,7 +108,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(24, 346);
+            this.label2.Location = new System.Drawing.Point(24, 373);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 22);
@@ -122,7 +121,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(317, 414);
+            this.label3.Location = new System.Drawing.Point(308, 373);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 22);
@@ -166,10 +165,10 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(308, 164);
+            this.btnBuscar.Location = new System.Drawing.Point(459, 162);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(88, 29);
+            this.btnBuscar.Size = new System.Drawing.Size(114, 29);
             this.btnBuscar.TabIndex = 108;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -190,15 +189,14 @@
             this.dgvMedicos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.nomb});
-            this.dgvMedicos.Location = new System.Drawing.Point(28, 209);
+            this.dgvMedicos.Location = new System.Drawing.Point(28, 198);
             this.dgvMedicos.MultiSelect = false;
             this.dgvMedicos.Name = "dgvMedicos";
             this.dgvMedicos.RowHeadersWidth = 51;
             this.dgvMedicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMedicos.Size = new System.Drawing.Size(536, 125);
+            this.dgvMedicos.Size = new System.Drawing.Size(545, 132);
             this.dgvMedicos.TabIndex = 123;
             this.dgvMedicos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMedicos_CellFormatting);
-            this.dgvMedicos.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMedicos_RowEnter);
             // 
             // Id
             // 
@@ -212,26 +210,6 @@
             this.nomb.Name = "nomb";
             this.nomb.Width = 300;
             // 
-            // dgvFechas
-            // 
-            this.dgvFechas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvFechas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFechas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dia});
-            this.dgvFechas.Location = new System.Drawing.Point(28, 439);
-            this.dgvFechas.MultiSelect = false;
-            this.dgvFechas.Name = "dgvFechas";
-            this.dgvFechas.RowHeadersWidth = 51;
-            this.dgvFechas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFechas.Size = new System.Drawing.Size(241, 110);
-            this.dgvFechas.TabIndex = 124;
-            this.dgvFechas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvFechas_CellFormatting);
-            // 
-            // dia
-            // 
-            this.dia.HeaderText = "Fecha";
-            this.dia.Name = "dia";
-            // 
             // dgvHora
             // 
             this.dgvHora.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
@@ -239,12 +217,12 @@
             this.dgvHora.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.dgvHora.Location = new System.Drawing.Point(321, 439);
+            this.dgvHora.Location = new System.Drawing.Point(312, 398);
             this.dgvHora.MultiSelect = false;
             this.dgvHora.Name = "dgvHora";
             this.dgvHora.RowHeadersWidth = 51;
             this.dgvHora.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHora.Size = new System.Drawing.Size(261, 110);
+            this.dgvHora.Size = new System.Drawing.Size(261, 107);
             this.dgvHora.TabIndex = 125;
             this.dgvHora.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvHora_CellFormatting);
             // 
@@ -262,7 +240,7 @@
             // 
             this.cbDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDias.FormattingEnabled = true;
-            this.cbDias.Location = new System.Drawing.Point(28, 371);
+            this.cbDias.Location = new System.Drawing.Point(28, 398);
             this.cbDias.Name = "cbDias";
             this.cbDias.Size = new System.Drawing.Size(241, 28);
             this.cbDias.TabIndex = 126;
@@ -274,7 +252,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(24, 414);
+            this.label1.Location = new System.Drawing.Point(24, 452);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 22);
@@ -288,28 +266,48 @@
             this.btnSelecMed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelecMed.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelecMed.ForeColor = System.Drawing.Color.White;
-            this.btnSelecMed.Location = new System.Drawing.Point(412, 162);
+            this.btnSelecMed.Location = new System.Drawing.Point(338, 162);
             this.btnSelecMed.Name = "btnSelecMed";
-            this.btnSelecMed.Size = new System.Drawing.Size(152, 31);
+            this.btnSelecMed.Size = new System.Drawing.Size(114, 29);
             this.btnSelecMed.TabIndex = 128;
             this.btnSelecMed.Text = "Seleccionar";
             this.btnSelecMed.UseVisualStyleBackColor = false;
             this.btnSelecMed.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnSelectFecha
+            // cbFecha
             // 
-            this.btnSelectFecha.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnSelectFecha.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnSelectFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectFecha.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectFecha.ForeColor = System.Drawing.Color.White;
-            this.btnSelectFecha.Location = new System.Drawing.Point(216, 556);
-            this.btnSelectFecha.Name = "btnSelectFecha";
-            this.btnSelectFecha.Size = new System.Drawing.Size(152, 31);
-            this.btnSelectFecha.TabIndex = 130;
-            this.btnSelectFecha.Text = "Seleccionar";
-            this.btnSelectFecha.UseVisualStyleBackColor = false;
-            this.btnSelectFecha.Click += new System.EventHandler(this.btnSelecFecha_Click);
+            this.cbFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFecha.FormattingEnabled = true;
+            this.cbFecha.Location = new System.Drawing.Point(28, 477);
+            this.cbFecha.Name = "cbFecha";
+            this.cbFecha.Size = new System.Drawing.Size(241, 28);
+            this.cbFecha.TabIndex = 131;
+            this.cbFecha.SelectedIndexChanged += new System.EventHandler(this.cbFecha_SelectedIndexChanged);
+            // 
+            // lblSel
+            // 
+            this.lblSel.AutoSize = true;
+            this.lblSel.BackColor = System.Drawing.Color.Transparent;
+            this.lblSel.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSel.ForeColor = System.Drawing.Color.White;
+            this.lblSel.Location = new System.Drawing.Point(24, 162);
+            this.lblSel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSel.Name = "lblSel";
+            this.lblSel.Size = new System.Drawing.Size(131, 22);
+            this.lblSel.TabIndex = 132;
+            this.lblSel.Text = " Seleccione médico";
+            // 
+            // txtMedSel
+            // 
+            this.txtMedSel.AutoSize = true;
+            this.txtMedSel.BackColor = System.Drawing.Color.Transparent;
+            this.txtMedSel.Font = new System.Drawing.Font("Tw Cen MT Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMedSel.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.txtMedSel.Location = new System.Drawing.Point(24, 333);
+            this.txtMedSel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtMedSel.Name = "txtMedSel";
+            this.txtMedSel.Size = new System.Drawing.Size(0, 22);
+            this.txtMedSel.TabIndex = 133;
             // 
             // frmRegistrarCitaMedica
             // 
@@ -318,12 +316,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(114)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(635, 623);
-            this.Controls.Add(this.btnSelectFecha);
+            this.Controls.Add(this.txtMedSel);
+            this.Controls.Add(this.lblSel);
+            this.Controls.Add(this.cbFecha);
             this.Controls.Add(this.btnSelecMed);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbDias);
             this.Controls.Add(this.dgvHora);
-            this.Controls.Add(this.dgvFechas);
             this.Controls.Add(this.dgvMedicos);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtSeleccionar);
@@ -340,7 +339,6 @@
             this.Name = "frmRegistrarCitaMedica";
             this.Text = "frmRegistrarCitaMedica";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFechas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHora)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -361,14 +359,14 @@
         private System.Windows.Forms.DataGridView dgvMedicos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomb;
-        private System.Windows.Forms.DataGridView dgvFechas;
         private System.Windows.Forms.DataGridView dgvHora;
         private System.Windows.Forms.ComboBox cbDias;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSelecMed;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dia;
-        private System.Windows.Forms.Button btnSelectFecha;
+        private System.Windows.Forms.ComboBox cbFecha;
+        private System.Windows.Forms.Label lblSel;
+        private System.Windows.Forms.Label txtMedSel;
     }
 }

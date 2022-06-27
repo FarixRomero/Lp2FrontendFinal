@@ -22,7 +22,9 @@ namespace LP2Clinica
         private GestionMedicaWS.paciente paciente;
         private String diaSeleccionado;
 
-        private BindingList<DateTime> dateTimes;
+        private BindingList<String> dateTimes;
+        private BindingList<GestionMedicaWS.horario> horariosXDia;
+
         public frmRegistrarCitaMedica(GestionMedicaWS.paciente paciente = null)
         {
             InitializeComponent();
@@ -40,11 +42,11 @@ namespace LP2Clinica
             _citaMed = new GestionMedicaWS.citaMedica();
             dgvMedicos.AutoGenerateColumns = false;
             dgvHora.AutoGenerateColumns = false;
-            dgvFechas.AutoGenerateColumns = false;
+            //dgvFechas.AutoGenerateColumns = false;
 
 
         }
-        public static BindingList<DateTime> GetAllDayOfWeekPerMonth(int month, int year, DayOfWeek dayOfWeek)
+        public static BindingList<String> GetAllDayOfWeekPerMonth(int month, int year, DayOfWeek dayOfWeek)
         {
             var date =  DateTime.Today;
 
@@ -54,11 +56,11 @@ namespace LP2Clinica
                 date = date.AddDays(daysUntilDayOfWeek);
             }
 
-            BindingList<DateTime> days = new BindingList<DateTime>();
+            BindingList<String> days = new BindingList<String>();
 
-            while (date.Month == month)
+            while (date.Month < month+2)
             {
-                days.Add(date);
+                days.Add(date.ToString("dd/MM/yyyy"));
                 date = date.AddDays(7);
             }
 
@@ -74,7 +76,7 @@ namespace LP2Clinica
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if ((dgvMedicos.SelectedRows.Count !=1 ||  dgvFechas.SelectedRows.Count !=1 || dgvHora.SelectedRows.Count != 1))
+            if ((dgvMedicos.SelectedRows.Count !=1 ||  dgvHora.SelectedRows.Count != 1 ))
             {
                 MessageBox.Show("Debe seleccionar todos los datos", "Mensaje de recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
@@ -82,7 +84,7 @@ namespace LP2Clinica
             else
             {
                 _citaMed.horario = (GestionMedicaWS.horario)dgvHora.CurrentRow.DataBoundItem;
-                _citaMed.fecha = (DateTime)dgvFechas.CurrentRow.DataBoundItem;
+                _citaMed.fecha = DateTime.ParseExact((String)cbFecha.SelectedItem, "dd/MM/yyyy", null);
                 _citaMed.fechaSpecified = true;
                 _citaMed.paciente = paciente;
                 _citaMed.estado = "RESERVADO";
@@ -93,11 +95,9 @@ namespace LP2Clinica
                 if (resultado != 0)
                 {
                     MessageBox.Show("Se ha creado la cita correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dgvFechas.DataSource = null;
+                    //dgvFechas.DataSource = null;
                     dgvHora.DataSource = null;
-
-                    diaSeleccionado = "";
-
+                    horariosXDia = new BindingList<GestionMedicaWS.horario>();
                     this.DialogResult = DialogResult.OK;
                 }
                 else
@@ -150,7 +150,7 @@ namespace LP2Clinica
         {
             if ((dgvMedicos.SelectedRows.Count != 1))
             {
-                MessageBox.Show("Debe seleccionar Medico y Día", "Mensaje de recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe seleccionar Medico", "Mensaje de recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
             else
@@ -165,6 +165,7 @@ namespace LP2Clinica
 
                     }
                 }
+                txtMedSel.Text = "Médico seleccionado";
 
             }
        
@@ -182,25 +183,21 @@ namespace LP2Clinica
 
         }
 
-        private void dgvFechas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (dgvFechas.Rows[e.RowIndex].DataBoundItem != null)
-            {
-                DateTime horario = (DateTime)dgvFechas.Rows[e.RowIndex].DataBoundItem;
-                if (horario != null)
-                {
-                    string date_str = horario.ToString("dd/MM/yyyy");
-                    dgvFechas.Rows[e.RowIndex].Cells[0].Value = date_str;
-                }
-            }
+        //private void dgvFechas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        //{
+        //    if (dgvFechas.Rows[e.RowIndex].DataBoundItem != null)
+        //    {
+        //        DateTime horario = (DateTime)dgvFechas.Rows[e.RowIndex].DataBoundItem;
+        //        if (horario != null)
+        //        {
+        //            string date_str = horario.ToString("dd/MM/yyyy");
+        //            dgvFechas.Rows[e.RowIndex].Cells[0].Value = date_str;
+        //        }
+        //    }
            
-        }
+        //}
 
-        private void dgvMedicos_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-          
-       
-        }
+        
 
         private void btnSelectDia_Click(object sender, EventArgs e)
         {
@@ -223,17 +220,17 @@ namespace LP2Clinica
                 else if (diaSeleccionado == "Viernes") day = DayOfWeek.Friday;
                 else if (diaSeleccionado == "Sabado") day = DayOfWeek.Saturday;
                 dateTimes = GetAllDayOfWeekPerMonth(Int32.Parse(DateTime.Now.Month.ToString()), 2022, day);
-                dgvFechas.DataSource = dateTimes;
+                //dgvFechas.DataSource = dateTimes;
             }
         }
 
         private void btnSelecFecha_Click(object sender, EventArgs e)
         {
-            GestionMedicaWS.horario[] horarios = daoGestionMedica.listarHorariosXMedicoYFecha(_medSelc.id_medico, diaSeleccionado, ((DateTime)dgvFechas.CurrentRow.DataBoundItem).ToString("yyyy-MM-dd"));
-            if (horarios != null)
-                dgvHora.DataSource = new BindingList<GestionMedicaWS.horario>(horarios.ToList());
-            else
-                dgvHora.DataSource = new BindingList<GestionMedicaWS.horario>();
+            //GestionMedicaWS.horario[] horarios = daoGestionMedica.listarHorariosXMedicoYFecha(_medSelc.id_medico, diaSeleccionado, ((DateTime)dgvFechas.CurrentRow.DataBoundItem).ToString("yyyy-MM-dd"));
+            //if (horarios != null)
+            //    dgvHora.DataSource = new BindingList<GestionMedicaWS.horario>(horarios.ToList());
+            //else
+            //    dgvHora.DataSource = new BindingList<GestionMedicaWS.horario>();
         }
 
         private void cbDias_SelectedIndexChanged(object sender, EventArgs e)
@@ -251,8 +248,22 @@ namespace LP2Clinica
             else if (diaSeleccionado == "Viernes") day = DayOfWeek.Friday;
             else if (diaSeleccionado == "Sabado") day = DayOfWeek.Saturday;
             dateTimes = GetAllDayOfWeekPerMonth(Int32.Parse(DateTime.Now.Month.ToString()), 2022, day);
-            dgvFechas.DataSource = dateTimes;
 
+            //dgvFechas.DataSource = dateTimes;
+            cbFecha.DataSource = dateTimes;
+
+        }
+
+        private void cbFecha_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String fechaSeleccionadaFormato = DateTime.ParseExact((String)cbFecha.SelectedItem, "dd/MM/yyyy", null).ToString("yyyy-MM-dd");
+            GestionMedicaWS.horario[] horarios = daoGestionMedica.listarHorariosXMedicoYFecha(_medSelc.id_medico, diaSeleccionado, fechaSeleccionadaFormato);
+            if (horarios != null)
+                horariosXDia = new BindingList<GestionMedicaWS.horario>(horarios.ToList());
+            else
+                horariosXDia = new BindingList<GestionMedicaWS.horario>();
+            dgvHora.DataSource = horariosXDia;
+            //DateTime.ParseExact((String)cbFecha.SelectedItem, "dd/MM/yyyy", null);
         }
     }
 }
