@@ -10,15 +10,14 @@ namespace LP2Clinica
     {
         [STAThread]
         
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(true);
-            Application.Run(new frmGenerarDiagnostico());
+        //static void Main()
+        //{
+        //    Application.EnableVisualStyles();
+        //    Application.SetCompatibleTextRenderingDefault(true);
+        //    Application.Run(new frmGenerarDiagnostico());
 
-        }
+        //}
         
-        /*
         static void Main()
         {
             Application.EnableVisualStyles();
@@ -41,6 +40,5 @@ namespace LP2Clinica
                 Application.OpenForms[0].FormClosed += INICIO_Closed;
             }
         }
-        */
     }
 }
