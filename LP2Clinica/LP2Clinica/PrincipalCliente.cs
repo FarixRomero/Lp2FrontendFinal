@@ -126,7 +126,7 @@ namespace LP2Clinica
         {
             FrmBandejadeEntrada bandeja = new FrmBandejadeEntrada(null, paciente); 
             abrirFormulario(bandeja);
-
+                
         }
     }
 

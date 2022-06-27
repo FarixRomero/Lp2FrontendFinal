@@ -102,7 +102,7 @@ namespace LP2Clinica
                     nuevomensaje.paciente.username = _paciente.username;
 
                 }
-                nuevomensaje.fecha = DateTime.Now;
+                //nuevomensaje.fecha = DateTime.Now;
 
                 daoGestionMedica.insertarChat(nuevomensaje);
             }
