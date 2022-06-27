@@ -72,6 +72,24 @@
     <Compile Include="frmAdministrarMedico.Designer.cs">
       <DependentUpon>frmAdministrarMedico.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarDiagnostico2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarDiagnostico2.Designer.cs">
+      <DependentUpon>frmBuscarDiagnostico2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarMedicamento.Designer.cs">
+      <DependentUpon>frmBuscarMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarRecetaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarRecetaMedica.Designer.cs">
+      <DependentUpon>frmBuscarRecetaMedica.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCalificaryComentar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +344,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrarMedico.resx">
       <DependentUpon>frmAdministrarMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarDiagnostico2.resx">
+      <DependentUpon>frmBuscarDiagnostico2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarMedicamento.resx">
+      <DependentUpon>frmBuscarMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarRecetaMedica.resx">
+      <DependentUpon>frmBuscarRecetaMedica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCalificaryComentar.resx">
       <DependentUpon>frmCalificaryComentar.cs</DependentUpon>
@@ -582,7 +609,13 @@
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarLineasRecetasMedicasResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarLineasXIdRecetaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarMedicamentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarRecetaMedicaXDNIoNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarRecetasMedicasResponse.datasource">

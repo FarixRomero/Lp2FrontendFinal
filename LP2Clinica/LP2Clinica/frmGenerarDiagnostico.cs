@@ -97,9 +97,10 @@ namespace LP2Clinica
             _diagnostico.observacion = txtObservacion.Text;
 
             _diagnostico.citaMedica = new GestionMedicaWS.citaMedica();
-            _diagnostico.citaMedica = _citaMedica;//_diagnostico.citaMedica.id_cita = Int32.Parse(txtIDCita.Text);
+            _diagnostico.citaMedica = _citaMedica;
 
             _diagnostico.historialClinico = new GestionMedicaWS.historialClinico();
+            _diagnostico.historialClinico.paciente= new GestionMedicaWS.paciente();
             _diagnostico.historialClinico.nroHistoria = daoGestionMedica.obtenerIDHistorialPorIDPaciente(_citaMedica.paciente.id_paciente);
 
             if(_estado == Estado.Nuevo)
