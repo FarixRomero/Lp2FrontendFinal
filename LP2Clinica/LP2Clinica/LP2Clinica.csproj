@@ -486,6 +486,10 @@
     <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS1.wsdl" />
+    <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarCitaMedicaPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -779,6 +783,10 @@
     </None>
     <None Include="Connected Services\RRHHWS\RRHHWS.wsdl" />
     <None Include="Connected Services\RRHHWS\RRHHWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RRHHWS\RRHHWS1.wsdl" />
+    <None Include="Connected Services\RRHHWS\RRHHWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
