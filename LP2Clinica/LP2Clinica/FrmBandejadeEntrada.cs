@@ -25,6 +25,7 @@ namespace LP2Clinica
         public FrmBandejadeEntrada(RRHHWS.medico medico,GestionMedicaWS.paciente paciente)
         {
             InitializeComponent();
+            dgvBandeja.AutoGenerateColumns = false;
             daoRRHHWS = new RRHHWS.RRHHWSClient();
             RRHHWS.usuario[] bandeja = null;// aqui debo listar los usuarios con conversa antendido;
             if (paciente != null) {
@@ -101,7 +102,8 @@ namespace LP2Clinica
                     nuevomensaje.paciente.username = _paciente.username;
 
                 }
-                //nuevomensaje.fecha = DateTime.Now;
+                nuevomensaje.fecha = DateTime.Now;
+
                 daoGestionMedica.insertarChat(nuevomensaje);
             }
         }
