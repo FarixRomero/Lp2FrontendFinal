@@ -55,48 +55,13 @@
     <Compile Include="CartillaInformacion.Designer.cs">
       <DependentUpon>CartillaInformacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Chat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Chat.Designer.cs">
-      <DependentUpon>Chat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\GestionMedicaWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\RRHHWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
+   
     <Compile Include="Estado.cs" />
     <Compile Include="frmAdministrarMedico.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAdministrarMedico.Designer.cs">
       <DependentUpon>frmAdministrarMedico.cs</DependentUpon>
-    </Compile>
-
-    <Compile Include="frmBuscarDiagnostico2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBuscarDiagnostico2.Designer.cs">
-      <DependentUpon>frmBuscarDiagnostico2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmBuscarMedicamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBuscarMedicamento.Designer.cs">
-      <DependentUpon>frmBuscarMedicamento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmBuscarRecetaMedica.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBuscarRecetaMedica.Designer.cs">
-      <DependentUpon>frmBuscarRecetaMedica.cs</DependentUpon>
-
     </Compile>
     <Compile Include="frmCalificaryComentar.cs">
       <SubType>Form</SubType>
@@ -314,12 +279,6 @@
     <Compile Include="frmBuscarDiagnostico.Designer.cs">
       <DependentUpon>frmBuscarDiagnostico.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImprimirDiagnostico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ImprimirDiagnostico.Designer.cs">
-      <DependentUpon>ImprimirDiagnostico.cs</DependentUpon>
-    </Compile>
     <Compile Include="modificardatosmedicos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,17 +317,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrarMedico.resx">
       <DependentUpon>frmAdministrarMedico.cs</DependentUpon>
-    </EmbeddedResource>
-
-    <EmbeddedResource Include="frmBuscarDiagnostico2.resx">
-      <DependentUpon>frmBuscarDiagnostico2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscarMedicamento.resx">
-      <DependentUpon>frmBuscarMedicamento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBuscarRecetaMedica.resx">
-      <DependentUpon>frmBuscarRecetaMedica.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="frmCalificaryComentar.resx">
       <DependentUpon>frmCalificaryComentar.cs</DependentUpon>
@@ -478,9 +426,6 @@
     <EmbeddedResource Include="frmBuscarDiagnostico.resx">
       <DependentUpon>frmBuscarDiagnostico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImprimirDiagnostico.resx">
-      <DependentUpon>ImprimirDiagnostico.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="modificardatosmedicos.resx">
       <DependentUpon>modificardatosmedicos.cs</DependentUpon>
     </EmbeddedResource>
@@ -501,324 +446,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS.wsdl" />
-    <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarCitaMedicaPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarDiagnosticoPorIdCitaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarMedicoPorIdCuentaUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarPacientePorIdCuentaUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarPacientePorNombreResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.chat.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.citaMedica.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.comentario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.consultorio.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.diagnostico.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.eliminarChatResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.eliminarCitaMedicaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.eliminarComentarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.eliminarDiagnosticoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.eliminarHistorialClinicoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.eliminarLineaRecetaMedicaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.eliminarMedicamentoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.eliminarPacienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.eliminarRecetaMedicaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.generarReporteDiagnosticoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.historialClinico.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.horario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.insertarChatResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.insertarCitaMedicaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.insertarComentarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.insertarDiagnosticoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.insertarHistorialClinicoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.insertarLineaRecetaMedicaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.insertarMedicamentoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.insertarPacienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.insertarRecetaMedicaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.lineaRecetaMedica.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarChatsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarCitaMedicaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarCitaMedicaXAdminResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarComentariosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarConsultoriosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarDiagnosticosPorDNIPacienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarDiagnosticosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarHistorialClinicoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarHorariosXMedicoYDiaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarHorariosXMedicoYFechaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarLineasRecetasMedicasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarLineasXIdRecetaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarMedicamentoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarRecetaMedicaXDNIoNombreResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarRecetasMedicasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarTodosPacientesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.medicamento.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.medico.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.modificarChatResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.modificarCitaMedicaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.modificarComentarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.modificarDiagnosticoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.modificarHistorialClinicoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.modificarLineaRecetaMedicaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.modificarMedicamentoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.modificarMedicoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.modificarPacienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.modificarRecetaMedicaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.obtenerIDHistorialPorIDPacienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.paciente.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.recetaMedica.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.administrador.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.buscarAdministradorPorIdCuentaUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.buscarAdministradorPorNombreResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.buscarMedicoPorIdCuentaUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.buscarMedicoPorNombreResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.buscarMedicoPorNombreYIdEspecialidadResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.consultorio.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.eliminarAdministradorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.eliminarConsultorioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.eliminarHorarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.eliminarMedicoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.especialidad.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.generarReporteCitasDiaActualResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.generarReporteDemandaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.horario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.horasHorario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.insertarAdministradorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.insertarConsultorioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.insertarHorarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.insertarMedicoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarBandejaDeMedicoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarConsultoriosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarDiasxIdMedicoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarHorariosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarHorariosXMedicoYDiaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarHorasHorarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarSemestreActivoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarTodosAdministradorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarTodosEspecialidadesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarTodosMedicosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.medico.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.modificarAdministradorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.modificarConsultorioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.modificarMedicoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.modificarPasswordResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.modificarUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.semestre.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.usuario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.verificarCuentaUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\RRHHWS\RRHHWS.wsdl" />
-    <None Include="Connected Services\RRHHWS\RRHHWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
+    
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -979,42 +607,11 @@
     <None Include="Resources\icono-del-usuario-mensaje-correo-sobre-electrónico-110413673-removebg-preview1.png" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="AcroPDFLib">
-      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="AxAcroPDFLib">
-      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\GestionMedicaWS\" />
     <WCFMetadataStorage Include="Connected Services\RRHHWS\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\GestionMedicaWS\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\GestionMedicaWS\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\GestionMedicaWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\RRHHWS\configuration91.svcinfo" />
@@ -1024,6 +621,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\RRHHWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GestionMedicaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GestionMedicaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GestionMedicaWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

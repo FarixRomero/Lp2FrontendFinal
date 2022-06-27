@@ -114,11 +114,19 @@ namespace LP2Clinica
 
         }
 
+
         private void btnDiagnostico_Click(object sender, EventArgs e)
         {
             ImprimirDiagnostico formImprimirDiagnostico = new ImprimirDiagnostico();
             formImprimirDiagnostico.SetPrincipal(this);
             abrirFormulario(formImprimirDiagnostico);
+        }
+
+        private void btnChats_Click(object sender, EventArgs e)
+        {
+            FrmBandejadeEntrada bandeja = new FrmBandejadeEntrada(null, paciente); 
+            abrirFormulario(bandeja);
+
         }
     }
 
