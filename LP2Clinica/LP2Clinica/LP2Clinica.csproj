@@ -114,6 +114,12 @@
     <Compile Include="frmCitaMedica.designer.cs">
       <DependentUpon>frmCitaMedica.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCitasAntesQueTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCitasAntesQueTu.Designer.cs">
+      <DependentUpon>frmCitasAntesQueTu.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCodigoContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,12 @@
     </Compile>
     <Compile Include="frmIngresarNuevaContraseña.Designer.cs">
       <DependentUpon>frmIngresarNuevaContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadeCitasDelDiaPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadeCitasDelDiaPaciente.Designer.cs">
+      <DependentUpon>frmListadeCitasDelDiaPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="frmModificarDatos.cs">
       <SubType>Form</SubType>
@@ -375,6 +387,9 @@
     <EmbeddedResource Include="frmCitaMedica.resx">
       <DependentUpon>frmCitaMedica.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCitasAntesQueTu.resx">
+      <DependentUpon>frmCitasAntesQueTu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCodigoContraseña.resx">
       <DependentUpon>frmCodigoContraseña.cs</DependentUpon>
     </EmbeddedResource>
@@ -410,6 +425,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmIngresarNuevaContraseña.resx">
       <DependentUpon>frmIngresarNuevaContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadeCitasDelDiaPaciente.resx">
+      <DependentUpon>frmListadeCitasDelDiaPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmModificarDatos.resx">
       <DependentUpon>frmModificarDatos.cs</DependentUpon>
@@ -504,6 +522,9 @@
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarCitaMedicaPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarCitaXPacienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarDiagnosticoPorIdCitaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -514,6 +535,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarPacientePorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarRecetaMedicaXIdCitaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.chat.datasource">
@@ -1019,6 +1043,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PANTALLA B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PANTALLA B1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

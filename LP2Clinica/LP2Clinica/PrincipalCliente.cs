@@ -131,7 +131,8 @@ namespace LP2Clinica
 
         private void btnCOLA_Click(object sender, EventArgs e)
         {
-
+            frmListadeCitasDelDiaPaciente cola = new frmListadeCitasDelDiaPaciente(paciente);
+            abrirFormulario(cola);
         }
     }
 
