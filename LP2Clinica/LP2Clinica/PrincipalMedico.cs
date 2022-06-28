@@ -94,11 +94,8 @@ namespace LP2Clinica
         {
             FrmBandejadeEntrada bandeja = new FrmBandejadeEntrada(medico,null); 
             abrirFormulario(bandeja);
-    }
-
-    private void btBuscarPaciente_Click(object sender, EventArgs e)
-        {
-
         }
+
+    
     }
 }

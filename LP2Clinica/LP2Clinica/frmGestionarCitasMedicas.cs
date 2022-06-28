@@ -80,30 +80,6 @@ namespace LP2Clinica
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (dtgCita.CurrentRow != null)
-            {
-                _citaSeleccionada = (GestionMedicaWS.citaMedica)dtgCita.CurrentRow.DataBoundItem;
-                this.DialogResult = DialogResult.OK;
-                DialogResult respuesta = MessageBox.Show("¿Está seguro que desea eliminar este consultorio",
-                "Mensaje de Confirmación", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-
-                if (respuesta == DialogResult.Yes)
-                {
-                    int resultado = daoGestionMedica.eliminarCitaMedica(_citaSeleccionada);
-                    if (resultado != 0)
-                    {
-                        dtgCita.Rows.RemoveAt(dtgCita.CurrentRow.Index);
-                        MessageBox.Show("Se ha eliminado correctamente", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                        MessageBox.Show("Ha ocurrido un error con la eliminación", "Mensaje de Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
         private void btnReprogramar_Click(object sender, EventArgs e)
         {
             if (sfdArchivo.ShowDialog() == DialogResult.OK)
@@ -122,9 +98,6 @@ namespace LP2Clinica
             }
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
