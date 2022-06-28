@@ -544,8 +544,6 @@
     </EmbeddedResource>
     <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS.wsdl" />
     <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS.xsd">
-
-
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarCitaMedicaPorIdResponse.datasource">
@@ -579,6 +577,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.consultorio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.ContarCitasDelanteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.diagnostico.datasource">
@@ -660,6 +661,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarCitaMedicaXIDMedicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarCitasXPacienteYFechaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarComentariosResponse.datasource">
@@ -785,9 +789,7 @@
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.especialidad.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.generarReporteCitasDiaActualResponse.datasource">
-
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.generarReporteDemandaResponse.datasource">
@@ -876,12 +878,10 @@
     </None>
     <None Include="Connected Services\RRHHWS\RRHHWS.wsdl" />
     <None Include="Connected Services\RRHHWS\RRHHWS.xsd">
-
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\RRHHWS\RRHHWS1.wsdl" />
     <None Include="Connected Services\RRHHWS\RRHHWS1.xsd">
-
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">

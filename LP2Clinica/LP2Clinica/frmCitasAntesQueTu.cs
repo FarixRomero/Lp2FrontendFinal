@@ -13,6 +13,8 @@ namespace LP2Clinica
     public partial class frmCitasAntesQueTu : Form
     {
         GestionMedicaWS.citaMedica _cita;
+        private GestionMedicaWS.GestionMedicaWSClient daoGESTMED;
+        private int numero = 0;
         public frmCitasAntesQueTu()
         {
             InitializeComponent();
@@ -20,7 +22,12 @@ namespace LP2Clinica
         public frmCitasAntesQueTu(GestionMedicaWS.citaMedica cita)
         {
             InitializeComponent();
-            _cita = cita; 
+            daoGESTMED = new GestionMedicaWS.GestionMedicaWSClient();
+            numero = daoGESTMED.ContarCitasDelante(DateTime.Now.ToString("yyyy-MM-dd"),
+                cita.horario.medico.id_medico,cita.horario.id_horario);
+            _cita = cita;
+
+            txtLabel.Text = numero.ToString();
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
