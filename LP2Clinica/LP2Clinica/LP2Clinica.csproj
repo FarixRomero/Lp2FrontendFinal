@@ -72,6 +72,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Estado.cs" />
+    <Compile Include="fmrListadoCitasPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrListadoCitasPaciente.Designer.cs">
+      <DependentUpon>fmrListadoCitasPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdministrarMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,12 @@
     </Compile>
     <Compile Include="frmCitaMedica.designer.cs">
       <DependentUpon>frmCitaMedica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCitasAntesQueTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCitasAntesQueTu.Designer.cs">
+      <DependentUpon>frmCitasAntesQueTu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCodigoContraseña.cs">
       <SubType>Form</SubType>
@@ -185,6 +197,12 @@
     </Compile>
     <Compile Include="frmIngresarNuevaContraseña.Designer.cs">
       <DependentUpon>frmIngresarNuevaContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadeCitasDelDiaPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadeCitasDelDiaPaciente.Designer.cs">
+      <DependentUpon>frmListadeCitasDelDiaPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="frmModificarDatos.cs">
       <SubType>Form</SubType>
@@ -366,6 +384,9 @@
     <EmbeddedResource Include="CartillaInformacion.resx">
       <DependentUpon>CartillaInformacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fmrListadoCitasPaciente.resx">
+      <DependentUpon>fmrListadoCitasPaciente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdministrarMedico.resx">
       <DependentUpon>frmAdministrarMedico.cs</DependentUpon>
     </EmbeddedResource>
@@ -389,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCitaMedica.resx">
       <DependentUpon>frmCitaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCitasAntesQueTu.resx">
+      <DependentUpon>frmCitasAntesQueTu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCodigoContraseña.resx">
       <DependentUpon>frmCodigoContraseña.cs</DependentUpon>
@@ -425,6 +449,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmIngresarNuevaContraseña.resx">
       <DependentUpon>frmIngresarNuevaContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadeCitasDelDiaPaciente.resx">
+      <DependentUpon>frmListadeCitasDelDiaPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmModificarDatos.resx">
       <DependentUpon>frmModificarDatos.cs</DependentUpon>
@@ -517,6 +544,8 @@
     </EmbeddedResource>
     <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS.wsdl" />
     <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS.xsd">
+
+
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarCitaMedicaPorIdResponse.datasource">
@@ -756,7 +785,9 @@
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.especialidad.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.generarReporteCitasDiaActualResponse.datasource">
+
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.generarReporteDemandaResponse.datasource">
@@ -781,6 +812,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarBandejaDeMedicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarBandejaDePacienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarConsultoriosResponse.datasource">
@@ -842,6 +876,12 @@
     </None>
     <None Include="Connected Services\RRHHWS\RRHHWS.wsdl" />
     <None Include="Connected Services\RRHHWS\RRHHWS.xsd">
+
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\RRHHWS\RRHHWS1.wsdl" />
+    <None Include="Connected Services\RRHHWS\RRHHWS1.xsd">
+
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\Settings.settings">
@@ -1052,6 +1092,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PANTALLA B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PANTALLA B1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

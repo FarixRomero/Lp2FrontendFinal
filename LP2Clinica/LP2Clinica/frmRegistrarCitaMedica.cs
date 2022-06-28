@@ -156,6 +156,7 @@ namespace LP2Clinica
             }
             else
             {
+                //DESCOMENTAR
                 cbDias.Items.Clear();
                 string[] diasMed = daoRRHH.listarDiasxIdMedico(((RRHHWS.medico)dgvMedicos.CurrentRow.DataBoundItem).id_medico);
                 if (diasMed != null)
@@ -257,7 +258,7 @@ namespace LP2Clinica
 
         private void cbFecha_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*
+            //DESCOMENTAR
             String fechaSeleccionadaFormato = DateTime.ParseExact((String)cbFecha.SelectedItem, "dd/MM/yyyy", null).ToString("yyyy-MM-dd");
             GestionMedicaWS.horario[] horarios = daoGestionMedica.listarHorariosXMedicoYFecha(_medSelc.id_medico, diaSeleccionado, fechaSeleccionadaFormato);
             if (horarios != null)
@@ -265,8 +266,7 @@ namespace LP2Clinica
             else
                 horariosXDia = new BindingList<GestionMedicaWS.horario>();
             dgvHora.DataSource = horariosXDia;
-            //DateTime.ParseExact((String)cbFecha.SelectedItem, "dd/MM/yyyy", null);
-            */
+            DateTime.ParseExact((String)cbFecha.SelectedItem, "dd/MM/yyyy", null);
         }
     }
 }

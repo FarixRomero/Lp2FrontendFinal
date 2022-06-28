@@ -117,9 +117,21 @@ namespace LP2Clinica
 
         private void btnDiagnostico_Click(object sender, EventArgs e)
         {
+            /*
             ImprimirDiagnostico formImprimirDiagnostico = new ImprimirDiagnostico();
             formImprimirDiagnostico.SetPrincipal(this);
             abrirFormulario(formImprimirDiagnostico);
+            */
+            /*
+            frmMostrarDiagnostico formMostrarDiagnostico = new frmMostrarDiagnostico();
+            formMostrarDiagnostico.SetPrincipal(this);
+            abrirFormulario(formMostrarDiagnostico);
+            */
+            fmrListadoCitasPaciente formListadoCitasPaciente = new fmrListadoCitasPaciente();
+            formListadoCitasPaciente.SetPrincipal(this);
+            //formListadoCitasPaciente.idPaciente = paciente.id_paciente;
+            abrirFormulario(formListadoCitasPaciente); 
+            //hola
         }
 
         private void btnChats_Click(object sender, EventArgs e)
@@ -127,6 +139,12 @@ namespace LP2Clinica
             FrmBandejadeEntrada bandeja = new FrmBandejadeEntrada(null, paciente); 
             abrirFormulario(bandeja);
                 
+        }
+
+        private void btnCOLA_Click(object sender, EventArgs e)
+        {
+            frmListadeCitasDelDiaPaciente cola = new frmListadeCitasDelDiaPaciente(paciente);
+            abrirFormulario(cola);
         }
     }
 

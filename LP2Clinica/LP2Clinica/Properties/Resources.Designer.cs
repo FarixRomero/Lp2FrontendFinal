@@ -424,6 +424,26 @@ namespace LP2Clinica.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PANTALLA_B {
+            get {
+                object obj = ResourceManager.GetObject("PANTALLA B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PANTALLA_B1 {
+            get {
+                object obj = ResourceManager.GetObject("PANTALLA B1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap persona_y_mensaje_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("persona_y_mensaje-removebg-preview", resourceCulture);
