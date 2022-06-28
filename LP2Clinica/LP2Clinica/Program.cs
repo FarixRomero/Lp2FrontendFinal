@@ -15,10 +15,10 @@ namespace LP2Clinica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
-            Application.Run(new frmGenerarDiagnostico());
+            Application.Run(new frmRegistroHorario());
 
         }
-        */
+        //*/
         ///*
         
         static void Main()
