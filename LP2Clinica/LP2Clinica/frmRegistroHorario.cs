@@ -17,6 +17,7 @@ namespace LP2Clinica
 
         private RRHHWS.horario _horario= null;
         private RRHHWS.semestre _semestre;
+        private RRHHWS.medico _medico = null;
 
         public frmRegistroHorario()
         {
@@ -35,9 +36,7 @@ namespace LP2Clinica
             lbDia.Items.Add("Sabado");
             _horario = new RRHHWS.horario();    
 
-            RRHHWS.horasHorario[] horas = daoRRHHHWS.listarHorasHorario();
-            if (horas != null)
-                dgvHorario.DataSource = new BindingList<RRHHWS.horasHorario>(horas.ToList());
+            
             _semestre = daoRRHHHWS.listarSemestreActivo()[0];
             //DateTImeNow :)
             lblSem.Text = _semestre.nombre;
@@ -48,6 +47,8 @@ namespace LP2Clinica
             RRHHWS.medico[] medico = daoRRHHHWS.listarTodosMedicos();
             if (medico != null)
                 dgvMedicos.DataSource = new BindingList<RRHHWS.medico>(medico.ToList());
+            txtSeleccionar.Enabled = true;
+            txtSeleccionar.Text = "";
          
         }
 
@@ -83,6 +84,11 @@ namespace LP2Clinica
                 {
                     MessageBox.Show("Se ha creado el horario correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
+
+                    RRHHWS.horasHorario[] horas = daoRRHHHWS.listarHorariosDisponiblesXidMedicoYdia(_medico.id_medico, lbDia.Text);
+                    if (horas != null)
+                        dgvHorario.DataSource = new BindingList<RRHHWS.horasHorario>(horas.ToList());
+
                 }
                 else
                 {
@@ -102,6 +108,30 @@ namespace LP2Clinica
                 //DateTime dt = DateTime.Parse(horario.hora_inicio.ToString());
                 dgvHorario.Rows[e.RowIndex].Cells[0].Value = horario.hora_inicio;
                 dgvHorario.Rows[e.RowIndex].Cells[1].Value = horario.hora_fin;
+            }
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (dgvMedicos.CurrentRow != null)
+            {
+                _medico = (RRHHWS.medico)dgvMedicos.CurrentRow.DataBoundItem;
+                txtSeleccionar.Text = _medico.nombre + " " + _medico.apellido;
+                txtSeleccionar.Enabled = false;
+            }
+        }
+
+        private void lbDia_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if(_medico == null)
+            {
+                MessageBox.Show("Debe seleccionar un médico", "Mensaje de recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                RRHHWS.horasHorario[] horas = daoRRHHHWS.listarHorariosDisponiblesXidMedicoYdia(_medico.id_medico,lbDia.Text);
+                if (horas != null)
+                    dgvHorario.DataSource = new BindingList<RRHHWS.horasHorario>(horas.ToList());
             }
         }
     }

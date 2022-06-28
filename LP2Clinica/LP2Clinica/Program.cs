@@ -14,12 +14,13 @@ namespace LP2Clinica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
+
             Application.Run(new frmInicio());
 
         }
         */
 
-        ///*
+
         
 
         static void Main()

@@ -45,6 +45,7 @@
             this.Horas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblSem = new System.Windows.Forms.Label();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorario)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +57,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(593, 94);
+            this.btnBuscar.Location = new System.Drawing.Point(594, 94);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(88, 29);
@@ -70,7 +71,7 @@
             this.txtSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSeleccionar.Location = new System.Drawing.Point(286, 95);
             this.txtSeleccionar.Name = "txtSeleccionar";
-            this.txtSeleccionar.Size = new System.Drawing.Size(300, 26);
+            this.txtSeleccionar.Size = new System.Drawing.Size(301, 26);
             this.txtSeleccionar.TabIndex = 120;
             // 
             // lbDia
@@ -83,6 +84,7 @@
             this.lbDia.Name = "lbDia";
             this.lbDia.Size = new System.Drawing.Size(271, 124);
             this.lbDia.TabIndex = 119;
+            this.lbDia.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbDia_MouseDoubleClick);
             // 
             // btnRegistrar
             // 
@@ -178,7 +180,7 @@
             this.dgvMedicos.Name = "dgvMedicos";
             this.dgvMedicos.RowHeadersWidth = 51;
             this.dgvMedicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMedicos.Size = new System.Drawing.Size(555, 182);
+            this.dgvMedicos.Size = new System.Drawing.Size(555, 147);
             this.dgvMedicos.TabIndex = 122;
             this.dgvMedicos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMedicos_CellFormatting);
             // 
@@ -239,12 +241,29 @@
             this.lblSem.TabIndex = 124;
             this.lblSem.Text = "Seleccione Dia";
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
+            this.btnSeleccionar.Location = new System.Drawing.Point(560, 281);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(122, 29);
+            this.btnSeleccionar.TabIndex = 125;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
             // frmRegistroHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(114)))));
             this.ClientSize = new System.Drawing.Size(770, 553);
+            this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.lblSem);
             this.Controls.Add(this.dgvHorario);
             this.Controls.Add(this.dgvMedicos);
@@ -285,5 +304,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Horas;
         private System.Windows.Forms.DataGridViewTextBoxColumn horaFin;
         private System.Windows.Forms.Label lblSem;
+        private System.Windows.Forms.Button btnSeleccionar;
     }
 }
