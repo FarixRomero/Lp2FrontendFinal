@@ -15,7 +15,7 @@ namespace LP2Clinica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
-            Application.Run(new frmRegistroHorario());
+            Application.Run(new frmRegistroRecetaMedica());
 
         }
         //*/

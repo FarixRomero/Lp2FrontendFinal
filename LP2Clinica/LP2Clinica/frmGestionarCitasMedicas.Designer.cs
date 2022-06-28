@@ -32,8 +32,6 @@
             this.pbCita = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnReprogramar = new System.Windows.Forms.Button();
             this.txtIngreso = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -54,10 +52,9 @@
             // 
             this.pbCita.BackColor = System.Drawing.Color.Transparent;
             this.pbCita.Image = global::LP2Clinica.Properties.Resources.descarga_removebg_preview2;
-            this.pbCita.Location = new System.Drawing.Point(43, 31);
-            this.pbCita.Margin = new System.Windows.Forms.Padding(4);
+            this.pbCita.Location = new System.Drawing.Point(32, 25);
             this.pbCita.Name = "pbCita";
-            this.pbCita.Size = new System.Drawing.Size(76, 85);
+            this.pbCita.Size = new System.Drawing.Size(57, 69);
             this.pbCita.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbCita.TabIndex = 84;
             this.pbCita.TabStop = false;
@@ -70,10 +67,9 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(43, 699);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(32, 568);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(211, 41);
+            this.btnCancelar.Size = new System.Drawing.Size(158, 33);
             this.btnCancelar.TabIndex = 83;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -85,44 +81,11 @@
             this.lblTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lblTitulo.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(429, 11);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(322, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(320, 51);
+            this.lblTitulo.Size = new System.Drawing.Size(259, 41);
             this.lblTitulo.TabIndex = 82;
             this.lblTitulo.Text = "GESTIÓN DE CITAS";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.White;
-            this.btnNuevo.Location = new System.Drawing.Point(280, 638);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(135, 37);
-            this.btnNuevo.TabIndex = 81;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(43, 638);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(124, 37);
-            this.btnEliminar.TabIndex = 80;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnReprogramar
             // 
@@ -131,10 +94,9 @@
             this.btnReprogramar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReprogramar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReprogramar.ForeColor = System.Drawing.Color.White;
-            this.btnReprogramar.Location = new System.Drawing.Point(494, 699);
-            this.btnReprogramar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReprogramar.Location = new System.Drawing.Point(370, 568);
             this.btnReprogramar.Name = "btnReprogramar";
-            this.btnReprogramar.Size = new System.Drawing.Size(255, 41);
+            this.btnReprogramar.Size = new System.Drawing.Size(191, 33);
             this.btnReprogramar.TabIndex = 79;
             this.btnReprogramar.Text = "Imprimir Citas de hoy";
             this.btnReprogramar.UseVisualStyleBackColor = false;
@@ -143,10 +105,9 @@
             // txtIngreso
             // 
             this.txtIngreso.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIngreso.Location = new System.Drawing.Point(43, 158);
-            this.txtIngreso.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIngreso.Location = new System.Drawing.Point(32, 128);
             this.txtIngreso.Name = "txtIngreso";
-            this.txtIngreso.Size = new System.Drawing.Size(491, 28);
+            this.txtIngreso.Size = new System.Drawing.Size(369, 24);
             this.txtIngreso.TabIndex = 78;
             // 
             // btnBuscar
@@ -156,10 +117,9 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(585, 146);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(439, 119);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(173, 41);
+            this.btnBuscar.Size = new System.Drawing.Size(130, 33);
             this.btnBuscar.TabIndex = 77;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -171,10 +131,9 @@
             this.lblIngreso.BackColor = System.Drawing.Color.Transparent;
             this.lblIngreso.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngreso.ForeColor = System.Drawing.Color.White;
-            this.lblIngreso.Location = new System.Drawing.Point(37, 123);
-            this.lblIngreso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIngreso.Location = new System.Drawing.Point(28, 100);
             this.lblIngreso.Name = "lblIngreso";
-            this.lblIngreso.Size = new System.Drawing.Size(280, 28);
+            this.lblIngreso.Size = new System.Drawing.Size(218, 22);
             this.lblIngreso.TabIndex = 76;
             this.lblIngreso.Text = "Ingresa el código de la cita:";
             // 
@@ -187,12 +146,11 @@
             this.colNombre,
             this.colIDCita,
             this.colEstado});
-            this.dtgCita.Location = new System.Drawing.Point(43, 210);
-            this.dtgCita.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgCita.Location = new System.Drawing.Point(32, 171);
             this.dtgCita.Name = "dtgCita";
             this.dtgCita.RowHeadersWidth = 51;
             this.dtgCita.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgCita.Size = new System.Drawing.Size(716, 398);
+            this.dtgCita.Size = new System.Drawing.Size(537, 323);
             this.dtgCita.TabIndex = 75;
             this.dtgCita.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgCita_CellFormatting);
             // 
@@ -231,10 +189,9 @@
             this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(423, 638);
-            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSeleccionar.Location = new System.Drawing.Point(442, 518);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(159, 37);
+            this.btnSeleccionar.Size = new System.Drawing.Size(119, 30);
             this.btnSeleccionar.TabIndex = 74;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = false;
@@ -246,10 +203,9 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(173, 638);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Location = new System.Drawing.Point(32, 518);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(99, 37);
+            this.btnEditar.Size = new System.Drawing.Size(158, 30);
             this.btnEditar.TabIndex = 85;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -257,17 +213,15 @@
             // 
             // frmGestionarCitasMedicas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(815, 794);
+            this.ClientSize = new System.Drawing.Size(611, 645);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.pbCita);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.btnNuevo);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnReprogramar);
             this.Controls.Add(this.txtIngreso);
             this.Controls.Add(this.btnBuscar);
@@ -276,7 +230,6 @@
             this.Controls.Add(this.btnSeleccionar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGestionarCitasMedicas";
             this.Text = "Gestión de Citas Médicas";
             ((System.ComponentModel.ISupportInitialize)(this.pbCita)).EndInit();
@@ -291,8 +244,6 @@
         private System.Windows.Forms.PictureBox pbCita;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnReprogramar;
         private System.Windows.Forms.TextBox txtIngreso;
         private System.Windows.Forms.Button btnBuscar;

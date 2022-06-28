@@ -32,7 +32,6 @@
             this.Menú = new System.Windows.Forms.Panel();
             this.btnRegistroRecetaMedica = new System.Windows.Forms.Button();
             this.btnChats = new System.Windows.Forms.Button();
-            this.btBuscarPaciente = new System.Windows.Forms.Button();
             this.btnVerCitas = new System.Windows.Forms.Button();
             this.btnBuscarDiagnostico = new System.Windows.Forms.Button();
             this.btnGenerarDiagnostico = new System.Windows.Forms.Button();
@@ -63,7 +62,6 @@
             this.Menú.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Menú.Controls.Add(this.btnRegistroRecetaMedica);
             this.Menú.Controls.Add(this.btnChats);
-            this.Menú.Controls.Add(this.btBuscarPaciente);
             this.Menú.Controls.Add(this.btnVerCitas);
             this.Menú.Controls.Add(this.btnBuscarDiagnostico);
             this.Menú.Controls.Add(this.btnGenerarDiagnostico);
@@ -74,7 +72,7 @@
             this.Menú.Controls.Add(this.pictureBox2);
             this.Menú.Controls.Add(this.pictureBox1);
             this.Menú.Location = new System.Drawing.Point(0, 1);
-            this.Menú.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Menú.Margin = new System.Windows.Forms.Padding(2);
             this.Menú.Name = "Menú";
             this.Menú.Size = new System.Drawing.Size(252, 570);
             this.Menú.TabIndex = 8;
@@ -83,7 +81,7 @@
             // 
             this.btnRegistroRecetaMedica.BackColor = System.Drawing.Color.PowderBlue;
             this.btnRegistroRecetaMedica.ImageKey = "(ninguno)";
-            this.btnRegistroRecetaMedica.Location = new System.Drawing.Point(22, 357);
+            this.btnRegistroRecetaMedica.Location = new System.Drawing.Point(22, 338);
             this.btnRegistroRecetaMedica.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistroRecetaMedica.Name = "btnRegistroRecetaMedica";
             this.btnRegistroRecetaMedica.Size = new System.Drawing.Size(200, 49);
@@ -96,8 +94,8 @@
             // 
             this.btnChats.BackColor = System.Drawing.Color.PowderBlue;
             this.btnChats.ImageKey = "(ninguno)";
-            this.btnChats.Location = new System.Drawing.Point(22, 465);
-            this.btnChats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChats.Location = new System.Drawing.Point(22, 446);
+            this.btnChats.Margin = new System.Windows.Forms.Padding(2);
             this.btnChats.Name = "btnChats";
             this.btnChats.Size = new System.Drawing.Size(200, 51);
             this.btnChats.TabIndex = 37;
@@ -105,24 +103,11 @@
             this.btnChats.UseVisualStyleBackColor = false;
             this.btnChats.Click += new System.EventHandler(this.btnChats_Click);
             // 
-            // btBuscarPaciente
-            // 
-            this.btBuscarPaciente.BackColor = System.Drawing.Color.PowderBlue;
-            this.btBuscarPaciente.ImageKey = "(ninguno)";
-            this.btBuscarPaciente.Location = new System.Drawing.Point(22, 244);
-            this.btBuscarPaciente.Margin = new System.Windows.Forms.Padding(2);
-            this.btBuscarPaciente.Name = "btBuscarPaciente";
-            this.btBuscarPaciente.Size = new System.Drawing.Size(200, 51);
-            this.btBuscarPaciente.TabIndex = 36;
-            this.btBuscarPaciente.Text = "Buscar Paciente";
-            this.btBuscarPaciente.UseVisualStyleBackColor = false;
-            this.btBuscarPaciente.Click += new System.EventHandler(this.btBuscarPaciente_Click);
-            // 
             // btnVerCitas
             // 
             this.btnVerCitas.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnVerCitas.Location = new System.Drawing.Point(22, 189);
-            this.btnVerCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerCitas.Location = new System.Drawing.Point(22, 228);
+            this.btnVerCitas.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerCitas.Name = "btnVerCitas";
             this.btnVerCitas.Size = new System.Drawing.Size(200, 51);
             this.btnVerCitas.TabIndex = 35;
@@ -133,7 +118,7 @@
             // btnBuscarDiagnostico
             // 
             this.btnBuscarDiagnostico.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnBuscarDiagnostico.Location = new System.Drawing.Point(22, 302);
+            this.btnBuscarDiagnostico.Location = new System.Drawing.Point(22, 283);
             this.btnBuscarDiagnostico.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarDiagnostico.Name = "btnBuscarDiagnostico";
             this.btnBuscarDiagnostico.Size = new System.Drawing.Size(200, 51);
@@ -146,8 +131,8 @@
             // 
             this.btnGenerarDiagnostico.BackColor = System.Drawing.Color.PowderBlue;
             this.btnGenerarDiagnostico.ImageKey = "(ninguno)";
-            this.btnGenerarDiagnostico.Location = new System.Drawing.Point(22, 410);
-            this.btnGenerarDiagnostico.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGenerarDiagnostico.Location = new System.Drawing.Point(22, 391);
+            this.btnGenerarDiagnostico.Margin = new System.Windows.Forms.Padding(2);
             this.btnGenerarDiagnostico.Name = "btnGenerarDiagnostico";
             this.btnGenerarDiagnostico.Size = new System.Drawing.Size(200, 51);
             this.btnGenerarDiagnostico.TabIndex = 33;
@@ -159,7 +144,7 @@
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.PowderBlue;
             this.btnCerrarSesion.Location = new System.Drawing.Point(107, 129);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(105, 25);
             this.btnCerrarSesion.TabIndex = 22;
@@ -171,7 +156,7 @@
             // 
             this.btnVerPerfil.BackColor = System.Drawing.Color.PowderBlue;
             this.btnVerPerfil.Location = new System.Drawing.Point(107, 99);
-            this.btnVerPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerPerfil.Name = "btnVerPerfil";
             this.btnVerPerfil.Size = new System.Drawing.Size(105, 25);
             this.btnVerPerfil.TabIndex = 21;
@@ -196,7 +181,7 @@
             this.pictureBox3.BackgroundImage = global::LP2Clinica.Properties.Resources.user3;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(22, 91);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(81, 72);
             this.pictureBox3.TabIndex = 7;
@@ -207,7 +192,7 @@
             this.pictureBox2.BackgroundImage = global::LP2Clinica.Properties.Resources.QHALI;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(37, 19);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(166, 34);
             this.pictureBox2.TabIndex = 5;
@@ -231,7 +216,7 @@
             this.ClientSize = new System.Drawing.Size(952, 565);
             this.Controls.Add(this.Menú);
             this.Controls.Add(this.panelContenedor);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PrincipalMedico";
             this.Text = "PrincipalMedico";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PrincipalMedico_FormClosed);
@@ -257,7 +242,6 @@
         private System.Windows.Forms.Button btnBuscarDiagnostico;
         private System.Windows.Forms.Button btnGenerarDiagnostico;
         private System.Windows.Forms.Button btnVerCitas;
-        private System.Windows.Forms.Button btBuscarPaciente;
 
         private System.Windows.Forms.Button btnRegistroRecetaMedica;
 
