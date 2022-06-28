@@ -72,7 +72,7 @@ namespace LP2Clinica
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            DialogResult respuesta = MessageBox.Show("¿Está seguro que deseas salir de Gestion citas medicas?",
+            DialogResult respuesta = MessageBox.Show("¿Está seguro que deseas salir del diagnostico?",
                "Mensaje de Confirmación", MessageBoxButtons.YesNo,
                MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)

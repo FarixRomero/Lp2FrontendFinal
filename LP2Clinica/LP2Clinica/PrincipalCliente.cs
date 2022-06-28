@@ -127,7 +127,7 @@ namespace LP2Clinica
             formMostrarDiagnostico.SetPrincipal(this);
             abrirFormulario(formMostrarDiagnostico);
             */
-            fmrListadoCitasPaciente formListadoCitasPaciente = new fmrListadoCitasPaciente();
+            fmrListadoCitasPaciente formListadoCitasPaciente = new fmrListadoCitasPaciente(paciente.id_paciente);
             formListadoCitasPaciente.SetPrincipal(this);
             //formListadoCitasPaciente.idPaciente = paciente.id_paciente;
             abrirFormulario(formListadoCitasPaciente); 

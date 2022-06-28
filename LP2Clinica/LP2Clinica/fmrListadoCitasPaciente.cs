@@ -25,11 +25,25 @@ namespace LP2Clinica
             daoGestionMedica = new GestionMedicaWS.GestionMedicaWSClient();
             IdPaciente = 44;
             GestionMedicaWS.citaMedica[] citaMedica = daoGestionMedica.buscarCitaXPaciente(IdPaciente);
-            if (citaMedica != null) {
+            dtgCitas.AutoGenerateColumns = false;
+            if (citaMedica != null && citaMedica.Length > 0) {
                 dtgCitas.DataSource = 
                     new BindingList<GestionMedicaWS.citaMedica>(citaMedica.ToList());
             }
+        }
+
+        public fmrListadoCitasPaciente(int _id)
+        {
+            InitializeComponent();
+            daoGestionMedica = new GestionMedicaWS.GestionMedicaWSClient();
+            IdPaciente = _id;
+            GestionMedicaWS.citaMedica[] citaMedica = daoGestionMedica.buscarCitaXPaciente(IdPaciente);
             dtgCitas.AutoGenerateColumns = false;
+            if (citaMedica != null && citaMedica.Length > 0)
+            {
+                dtgCitas.DataSource =
+                    new BindingList<GestionMedicaWS.citaMedica>(citaMedica.ToList());
+            }
         }
 
         public void SetPrincipal(PrincipalCliente principal)
@@ -62,20 +76,26 @@ namespace LP2Clinica
             _citaSeleccionada = (GestionMedicaWS.citaMedica)dtgCitas.CurrentRow.DataBoundItem;
             frmMostrarDiagnostico formMostrarDiagnostico = new frmMostrarDiagnostico(_citaSeleccionada.id_cita);
             formMostrarDiagnostico.IdCita = _citaSeleccionada.id_cita;
-            if (formMostrarDiagnostico.ShowDialog() == DialogResult.OK)
+            if (_citaSeleccionada.estado.Equals("CONCLUIDA") || 
+                _citaSeleccionada.estado.Equals("ATENDIDA"))
             {
-                GestionMedicaWS.citaMedica[] citaMedica = daoGestionMedica.buscarCitaXPaciente(IdPaciente);
-                if (citaMedica != null)
+                if (formMostrarDiagnostico.ShowDialog() == DialogResult.OK)
                 {
-                    dtgCitas.DataSource =
-                        new BindingList<GestionMedicaWS.citaMedica>(citaMedica.ToList());
+                    GestionMedicaWS.citaMedica[] citaMedica = daoGestionMedica.buscarCitaXPaciente(IdPaciente);
+                    if (citaMedica != null)
+                    {
+                        dtgCitas.DataSource =
+                            new BindingList<GestionMedicaWS.citaMedica>(citaMedica.ToList());
+                    }
                 }
             }
+            else
+                MessageBox.Show("Error al momento de visualizar la receta, su cita aun no ha concluido", "Mensaje de error", MessageBoxButtons.OK);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            DialogResult respuesta = MessageBox.Show("¿Está seguro que deseas salir de Gestion citas medicas?",
+            DialogResult respuesta = MessageBox.Show("¿Está seguro que deseas salir de la lista de citas medicas?",
                "Mensaje de Confirmación", MessageBoxButtons.YesNo,
                MessageBoxIcon.Question);
             if (respuesta == DialogResult.Yes)
