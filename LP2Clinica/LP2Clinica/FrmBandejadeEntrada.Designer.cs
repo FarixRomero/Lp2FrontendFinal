@@ -29,46 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBandejadeEntrada));
-            this.dgvBandeja = new System.Windows.Forms.DataGridView();
-            this.panelChat = new System.Windows.Forms.Panel();
             this.btnEnviarMensaje = new System.Windows.Forms.Button();
             this.txtMensaje = new System.Windows.Forms.TextBox();
-            this.Nombre_Completo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvBandeja = new System.Windows.Forms.DataGridView();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblMensajeEs = new System.Windows.Forms.Label();
+            this.PanelChatFlow = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBandeja)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvBandeja
-            // 
-            this.dgvBandeja.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(64)))), ((int)(((byte)(91)))));
-            this.dgvBandeja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBandeja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre_Completo});
-            this.dgvBandeja.Location = new System.Drawing.Point(11, 11);
-            this.dgvBandeja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dgvBandeja.Name = "dgvBandeja";
-            this.dgvBandeja.RowHeadersWidth = 51;
-            this.dgvBandeja.RowTemplate.Height = 24;
-            this.dgvBandeja.Size = new System.Drawing.Size(206, 494);
-            this.dgvBandeja.TabIndex = 0;
-            this.dgvBandeja.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBandeja_CellContentClick);
-            this.dgvBandeja.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBandeja_CellFormatting);
-            this.dgvBandeja.SelectionChanged += new System.EventHandler(this.dgvBandeja_SelectionChanged);
-            // 
-            // panelChat
-            // 
-            this.panelChat.AutoScroll = true;
-            this.panelChat.BackColor = System.Drawing.Color.Transparent;
-            this.panelChat.Location = new System.Drawing.Point(222, 11);
-            this.panelChat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panelChat.Name = "panelChat";
-            this.panelChat.Size = new System.Drawing.Size(384, 422);
-            this.panelChat.TabIndex = 8;
             // 
             // btnEnviarMensaje
             // 
             this.btnEnviarMensaje.BackColor = System.Drawing.Color.PowderBlue;
             this.btnEnviarMensaje.ImageKey = "(ninguno)";
-            this.btnEnviarMensaje.Location = new System.Drawing.Point(506, 446);
+            this.btnEnviarMensaje.Location = new System.Drawing.Point(638, 461);
             this.btnEnviarMensaje.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEnviarMensaje.Name = "btnEnviarMensaje";
             this.btnEnviarMensaje.Size = new System.Drawing.Size(94, 41);
@@ -81,20 +55,45 @@
             // 
             this.txtMensaje.BackColor = System.Drawing.Color.PowderBlue;
             this.txtMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMensaje.Location = new System.Drawing.Point(223, 447);
+            this.txtMensaje.Location = new System.Drawing.Point(354, 476);
             this.txtMensaje.Name = "txtMensaje";
             this.txtMensaje.Size = new System.Drawing.Size(279, 26);
             this.txtMensaje.TabIndex = 111;
-            this.txtMensaje.Text = "Escribir su mensaje";
             // 
-            // Nombre_Completo
+            // dgvBandeja
             // 
-            this.Nombre_Completo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Nombre_Completo.HeaderText = "Nombre";
-            this.Nombre_Completo.MinimumWidth = 50;
-            this.Nombre_Completo.Name = "Nombre_Completo";
-            this.Nombre_Completo.Visible = false;
-            this.Nombre_Completo.Width = 200;
+            this.dgvBandeja.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBandeja.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombre});
+            this.dgvBandeja.Location = new System.Drawing.Point(35, 12);
+            this.dgvBandeja.Name = "dgvBandeja";
+            this.dgvBandeja.Size = new System.Drawing.Size(254, 523);
+            this.dgvBandeja.TabIndex = 112;
+            this.dgvBandeja.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBandeja_CellFormatting);
+            this.dgvBandeja.SelectionChanged += new System.EventHandler(this.dgvBandeja_SelectionChanged);
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // lblMensajeEs
+            // 
+            this.lblMensajeEs.AutoSize = true;
+            this.lblMensajeEs.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblMensajeEs.Location = new System.Drawing.Point(351, 461);
+            this.lblMensajeEs.Name = "lblMensajeEs";
+            this.lblMensajeEs.Size = new System.Drawing.Size(85, 13);
+            this.lblMensajeEs.TabIndex = 113;
+            this.lblMensajeEs.Text = "Escriba Mensaje";
+            // 
+            // PanelChatFlow
+            // 
+            this.PanelChatFlow.Location = new System.Drawing.Point(354, 14);
+            this.PanelChatFlow.Name = "PanelChatFlow";
+            this.PanelChatFlow.Size = new System.Drawing.Size(246, 444);
+            this.PanelChatFlow.TabIndex = 114;
+            this.PanelChatFlow.WrapContents = false;
             // 
             // FrmBandejadeEntrada
             // 
@@ -102,11 +101,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(857, 640);
+            this.ClientSize = new System.Drawing.Size(825, 619);
+            this.Controls.Add(this.PanelChatFlow);
+            this.Controls.Add(this.lblMensajeEs);
+            this.Controls.Add(this.dgvBandeja);
             this.Controls.Add(this.txtMensaje);
             this.Controls.Add(this.btnEnviarMensaje);
-            this.Controls.Add(this.panelChat);
-            this.Controls.Add(this.dgvBandeja);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -124,11 +124,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvBandeja;
-        private System.Windows.Forms.Panel panelChat;
         private System.Windows.Forms.Button btnEnviarMensaje;
         private System.Windows.Forms.TextBox txtMensaje;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Completo;
+        private System.Windows.Forms.DataGridView dgvBandeja;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.Label lblMensajeEs;
+        private System.Windows.Forms.FlowLayoutPanel PanelChatFlow;
     }
 }
