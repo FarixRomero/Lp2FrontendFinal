@@ -777,6 +777,9 @@
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarBandejaDeMedicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarBandejaDePacienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarConsultoriosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

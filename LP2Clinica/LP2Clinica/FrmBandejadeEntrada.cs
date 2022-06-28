@@ -32,6 +32,7 @@ namespace LP2Clinica
             {
                 _paciente = paciente;
                 // aqui debo listar los usuarios con conversa antendido;
+                bandeja = daoRRHHWS.listarBandejaDePaciente(paciente.id_paciente);
 
             }
 
@@ -85,18 +86,19 @@ namespace LP2Clinica
                 {
                     nuevomensaje.emisor = _paciente.id_usuario;
                     // aqui debo asignar el contacto al usuario seleccionado del grid 
-                    GestionMedicaWS.medico contacto = new GestionMedicaWS.medico();
+                    GestionMedicaWS.medico contactoMed = new GestionMedicaWS.medico();
                     RRHHWS.usuario aux = new RRHHWS.usuario();
                     aux = (RRHHWS.usuario)dgvBandeja.CurrentRow.DataBoundItem;
-                    contacto = daoGestionMedica.buscarMedicoPorIdCuentaUsuario(aux.id_usuario);
 
-                    GestionMedicaWS.medico contacto_ = new GestionMedicaWS.medico();
-                    nuevomensaje.medico.id_medico = contacto_.id_medico;
-                    nuevomensaje.medico.foto = contacto_.foto;
-                    nuevomensaje.medico.nombre = contacto_.nombre;
-                    nuevomensaje.medico.apellido = contacto_.apellido;
-                    nuevomensaje.medico.username = contacto_.username;
+                    contactoMed = daoGestionMedica.buscarMedicoPorIdCuentaUsuario(aux.id_usuario);
+                    nuevomensaje.medico = new GestionMedicaWS.medico();
+                    nuevomensaje.medico.id_medico = contactoMed.id_medico;
+                    nuevomensaje.medico.foto = contactoMed.foto;
+                    nuevomensaje.medico.nombre = contactoMed.nombre;
+                    nuevomensaje.medico.apellido = contactoMed.apellido;
+                    nuevomensaje.medico.username = contactoMed.username;
 
+                    nuevomensaje.paciente = new GestionMedicaWS.paciente();
                     nuevomensaje.paciente.foto = _paciente.foto;
                     nuevomensaje.paciente.id_paciente = _paciente.id_paciente;
                     nuevomensaje.paciente.nombre = _paciente.nombre;
@@ -113,14 +115,15 @@ namespace LP2Clinica
                 });
 
                 daoGestionMedica.insertarChat(nuevomensaje);
-
+                txtMensaje.Text = "";
             }
         }
 
         private void dgvBandeja_SelectionChanged(object sender, EventArgs e)
         {
-            if (activar != 0)
-            {
+            PanelChatFlow.Controls.Clear();
+            //if (activar != 0)
+            //{
                 int idUsuario = -1;
                 GestionMedicaWS.chat[] mensajes = null;
                 if (_medico != null)
@@ -143,6 +146,7 @@ namespace LP2Clinica
                 }
                 if (mensajes != null)
                 {
+                    
                     foreach (GestionMedicaWS.chat mensaje in mensajes)
                     {
                         if (mensaje.emisor == idUsuario)
@@ -168,8 +172,8 @@ namespace LP2Clinica
                 PanelChatFlow.FlowDirection = FlowDirection.TopDown;
 
 
-            }
-            activar = 1;
+            //}
+            //activar = 1;
         }
 
         private void dgvBandeja_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
