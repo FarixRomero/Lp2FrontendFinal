@@ -156,17 +156,18 @@ namespace LP2Clinica
             }
             else
             {
-                cbDias.Items.Clear();
-                string[] diasMed = daoRRHH.listarDiasxIdMedico(((RRHHWS.medico)dgvMedicos.CurrentRow.DataBoundItem).id_medico);
-                if (diasMed != null)
-                {
-                    foreach (string horario in diasMed)
-                    {
-                        cbDias.Items.Add(horario);
+                //DESCOMENTAR
+                //cbDias.Items.Clear();
+                //string[] diasMed = daoRRHH.listarDiasxIdMedico(((RRHHWS.medico)dgvMedicos.CurrentRow.DataBoundItem).id_medico);
+                //if (diasMed != null)
+                //{
+                //    foreach (string horario in diasMed)
+                //    {
+                //        cbDias.Items.Add(horario);
 
-                    }
-                }
-                txtMedSel.Text = "Médico seleccionado";
+                //    }
+                //}
+                //txtMedSel.Text = "Médico seleccionado";
 
             }
        
@@ -257,13 +258,14 @@ namespace LP2Clinica
 
         private void cbFecha_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String fechaSeleccionadaFormato = DateTime.ParseExact((String)cbFecha.SelectedItem, "dd/MM/yyyy", null).ToString("yyyy-MM-dd");
-            GestionMedicaWS.horario[] horarios = daoGestionMedica.listarHorariosXMedicoYFecha(_medSelc.id_medico, diaSeleccionado, fechaSeleccionadaFormato);
-            if (horarios != null)
-                horariosXDia = new BindingList<GestionMedicaWS.horario>(horarios.ToList());
-            else
-                horariosXDia = new BindingList<GestionMedicaWS.horario>();
-            dgvHora.DataSource = horariosXDia;
+            //DESCOMENTAR
+            //String fechaSeleccionadaFormato = DateTime.ParseExact((String)cbFecha.SelectedItem, "dd/MM/yyyy", null).ToString("yyyy-MM-dd");
+            //GestionMedicaWS.horario[] horarios = daoGestionMedica.listarHorariosXMedicoYFecha(_medSelc.id_medico, diaSeleccionado, fechaSeleccionadaFormato);
+            //if (horarios != null)
+            //    horariosXDia = new BindingList<GestionMedicaWS.horario>(horarios.ToList());
+            //else
+            //    horariosXDia = new BindingList<GestionMedicaWS.horario>();
+            //dgvHora.DataSource = horariosXDia;
             //DateTime.ParseExact((String)cbFecha.SelectedItem, "dd/MM/yyyy", null);
         }
     }

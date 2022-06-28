@@ -26,11 +26,13 @@ namespace LP2Clinica
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+
             
             GestionMedicaWS.recetaMedica[] recetas = daoGestionMedica.listarRecetaMedicaXDNIoNombre(txtIngreso.Text);
             if(recetas!=null)
                 dgvReceta.DataSource=new BindingList<GestionMedicaWS.recetaMedica>(recetas.ToList());
             
+
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
@@ -38,9 +40,9 @@ namespace LP2Clinica
             
             if (dgvReceta.CurrentRow != null)
             {
-                recetaSeleccionado = (GestionMedicaWS.recetaMedica)dgvReceta.CurrentRow.DataBoundItem;
-                recetaSeleccionado.lineasRecetaMedica = daoGestionMedica.listarLineasXIdReceta(recetaSeleccionado.idReceta);
-                this.DialogResult = DialogResult.OK;
+                //recetaSeleccionado = (GestionMedicaWS.recetaMedica)dgvReceta.CurrentRow.DataBoundItem;
+                //recetaSeleccionado.lineasRecetaMedica = daoGestionMedica.listarLineasXIdReceta(recetaSeleccionado.idReceta);
+                //this.DialogResult = DialogResult.OK;
             }
             
         }
