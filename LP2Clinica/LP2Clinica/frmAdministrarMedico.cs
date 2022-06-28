@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,12 @@ namespace LP2Clinica
             daoRRHH = new RRHHWS.RRHHWSClient();
             this._medico = medico;
 
+            if (medico.foto.Length != 0)
+            {
+                MemoryStream ms = new MemoryStream(medico.foto);
+                pbFoto.Image = new Bitmap(ms);// mostrará la foto
+            }
+
             _estado = Estado.Inicial;
             establecerEstadoComponentes();
             limpiarComponentes();
@@ -35,7 +42,6 @@ namespace LP2Clinica
                     btnEditarDatos.Enabled = true;
                     btnGuardar.Visible = false;
                     btnCancelar.Visible = false;
-                    btnRegistrarCita.Enabled = true;
                     btnVerCalendario.Enabled = true;
                     btnCerrar.Enabled = true;
                     txtCorreo.Enabled = false;
@@ -46,7 +52,6 @@ namespace LP2Clinica
                     btnEditarDatos.Enabled = true;
                     btnGuardar.Visible = true;
                     btnCancelar.Visible = true;
-                    btnRegistrarCita.Enabled = false;
                     btnVerCalendario.Enabled = false;
                     btnCerrar.Enabled = true;
                     txtCorreo.Enabled = true;
@@ -80,7 +85,11 @@ namespace LP2Clinica
 
         private void btnVerCalendario_Click(object sender, EventArgs e)
         {
-
+            frmCalendarioMedico formCalendarioMedico = new frmCalendarioMedico(_medico);
+            if (formCalendarioMedico.ShowDialog() == DialogResult.OK)
+            {
+                
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -97,13 +106,7 @@ namespace LP2Clinica
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            DialogResult respuesta = MessageBox.Show("¿Está seguro que deseas dejar incompleto el registro?",
-                "Mensaje de Confirmación", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-            if (respuesta == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            this.Close();
         }
 
         private void btnCancelar_Click_1(object sender, EventArgs e)

@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdministrarMedico));
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnEditarDatos = new System.Windows.Forms.Button();
-            this.btnRegistrarCita = new System.Windows.Forms.Button();
             this.btnVerCalendario = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblEspecialidad = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblDNI = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNombreCompleto = new System.Windows.Forms.Label();
             this.dni = new System.Windows.Forms.Label();
             this.nombrecompleto = new System.Windows.Forms.Label();
@@ -45,7 +44,8 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbFoto = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
@@ -73,7 +73,7 @@
             this.btnEditarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarDatos.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarDatos.ForeColor = System.Drawing.Color.White;
-            this.btnEditarDatos.Location = new System.Drawing.Point(62, 361);
+            this.btnEditarDatos.Location = new System.Drawing.Point(62, 414);
             this.btnEditarDatos.Name = "btnEditarDatos";
             this.btnEditarDatos.Size = new System.Drawing.Size(146, 33);
             this.btnEditarDatos.TabIndex = 85;
@@ -81,23 +81,6 @@
             this.btnEditarDatos.Text = "Editar Datos";
             this.btnEditarDatos.UseVisualStyleBackColor = false;
             this.btnEditarDatos.Click += new System.EventHandler(this.btnEditarDatos_Click);
-            // 
-            // btnRegistrarCita
-            // 
-            this.btnRegistrarCita.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnRegistrarCita.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnRegistrarCita.FlatAppearance.BorderSize = 0;
-            this.btnRegistrarCita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrarCita.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarCita.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrarCita.Location = new System.Drawing.Point(226, 419);
-            this.btnRegistrarCita.Name = "btnRegistrarCita";
-            this.btnRegistrarCita.Size = new System.Drawing.Size(146, 33);
-            this.btnRegistrarCita.TabIndex = 87;
-            this.btnRegistrarCita.TabStop = false;
-            this.btnRegistrarCita.Text = "Registrar Cita";
-            this.btnRegistrarCita.UseVisualStyleBackColor = false;
-            this.btnRegistrarCita.Click += new System.EventHandler(this.btnRegistrarCita_Click);
             // 
             // btnVerCalendario
             // 
@@ -107,7 +90,7 @@
             this.btnVerCalendario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerCalendario.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerCalendario.ForeColor = System.Drawing.Color.White;
-            this.btnVerCalendario.Location = new System.Drawing.Point(62, 419);
+            this.btnVerCalendario.Location = new System.Drawing.Point(62, 477);
             this.btnVerCalendario.Name = "btnVerCalendario";
             this.btnVerCalendario.Size = new System.Drawing.Size(146, 33);
             this.btnVerCalendario.TabIndex = 89;
@@ -176,19 +159,6 @@
             this.lblDNI.TabIndex = 98;
             this.lblDNI.Text = "_DNI_";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::LP2Clinica.Properties.Resources.profilepicture;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = global::LP2Clinica.Properties.Resources.Madurez_emocional_7;
-            this.pictureBox1.Location = new System.Drawing.Point(355, 79);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(180, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 101;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblNombreCompleto
             // 
             this.lblNombreCompleto.AutoSize = true;
@@ -249,7 +219,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(226, 361);
+            this.btnGuardar.Location = new System.Drawing.Point(226, 414);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(146, 33);
             this.btnGuardar.TabIndex = 117;
@@ -266,7 +236,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(389, 361);
+            this.btnCancelar.Location = new System.Drawing.Point(389, 414);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(146, 33);
             this.btnCancelar.TabIndex = 118;
@@ -275,12 +245,27 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
+            // pbFoto
+            // 
+            this.pbFoto.BackColor = System.Drawing.Color.Transparent;
+            this.pbFoto.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbFoto.ErrorImage")));
+            this.pbFoto.Image = global::LP2Clinica.Properties.Resources.user3;
+            this.pbFoto.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbFoto.InitialImage")));
+            this.pbFoto.Location = new System.Drawing.Point(377, 60);
+            this.pbFoto.Name = "pbFoto";
+            this.pbFoto.Size = new System.Drawing.Size(158, 174);
+            this.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbFoto.TabIndex = 119;
+            this.pbFoto.TabStop = false;
+            // 
             // frmAdministrarMedico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(114)))));
+            this.BackgroundImage = global::LP2Clinica.Properties.Resources.PANTALLA_3;
             this.ClientSize = new System.Drawing.Size(610, 548);
+            this.Controls.Add(this.pbFoto);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtUser);
@@ -290,18 +275,16 @@
             this.Controls.Add(this.lblEspecialidad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblDNI);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblNombreCompleto);
             this.Controls.Add(this.dni);
             this.Controls.Add(this.nombrecompleto);
             this.Controls.Add(this.btnVerCalendario);
-            this.Controls.Add(this.btnRegistrarCita);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnEditarDatos);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAdministrarMedico";
             this.Text = "frmAdministrarMedico";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,14 +294,12 @@
 
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnEditarDatos;
-        private System.Windows.Forms.Button btnRegistrarCita;
         private System.Windows.Forms.Button btnVerCalendario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblEspecialidad;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblDNI;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblNombreCompleto;
         private System.Windows.Forms.Label dni;
         private System.Windows.Forms.Label nombrecompleto;
@@ -326,5 +307,6 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.PictureBox pbFoto;
     }
 }

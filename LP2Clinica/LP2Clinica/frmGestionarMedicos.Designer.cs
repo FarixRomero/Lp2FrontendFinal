@@ -35,10 +35,10 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblIngreso = new System.Windows.Forms.Label();
             this.dgvMedicos = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.esp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,24 +131,10 @@
             this.dgvMedicos.Location = new System.Drawing.Point(25, 155);
             this.dgvMedicos.Name = "dgvMedicos";
             this.dgvMedicos.RowHeadersWidth = 51;
+            this.dgvMedicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMedicos.Size = new System.Drawing.Size(537, 387);
             this.dgvMedicos.TabIndex = 87;
             this.dgvMedicos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvMedicos_CellFormatting);
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeleccionar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionar.Location = new System.Drawing.Point(443, 561);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(119, 30);
-            this.btnSeleccionar.TabIndex = 86;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = false;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // Id
             // 
@@ -166,6 +152,21 @@
             // 
             this.esp.HeaderText = "Especialidad";
             this.esp.Name = "esp";
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnSeleccionar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnSeleccionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeleccionar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
+            this.btnSeleccionar.Location = new System.Drawing.Point(443, 561);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(119, 30);
+            this.btnSeleccionar.TabIndex = 86;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = false;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // frmGestionarMedicos
             // 

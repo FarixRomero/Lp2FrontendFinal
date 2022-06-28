@@ -45,7 +45,8 @@ namespace LP2Clinica
 
         private void btnVerCitas_Click(object sender, EventArgs e)
         {
-
+            frmVerCitas formVerCitas = new frmVerCitas(medico);
+            abrirFormulario(formVerCitas);
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)

@@ -45,7 +45,7 @@
             this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(37)))), ((int)(((byte)(91)))));
             this.lblTitulo.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(12, 20);
+            this.lblTitulo.Location = new System.Drawing.Point(12, 21);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(415, 41);
             this.lblTitulo.TabIndex = 61;
@@ -59,7 +59,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Tw Cen MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(414, 84);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(159, 29);
             this.btnBuscar.TabIndex = 93;
