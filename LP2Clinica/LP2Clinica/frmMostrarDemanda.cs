@@ -38,10 +38,10 @@ namespace LP2Clinica
 
         private void btnGenerarReporte_Click(object sender, EventArgs e)
         {
-            //reporteBytes = daoRRHH.generarReporteDemanda(Int32.Parse(cbEspecialidad.SelectedValue.ToString()));
-            //File.WriteAllBytes("ReporteDemanda.pdf", reporteBytes);
-            //visorPDF.LoadFile("ReporteDemanda.pdf");
-            //visorPDF.setShowToolbar(true);
+            reporteBytes = daoRRHH.generarReporteDemanda(Int32.Parse(cbEspecialidad.SelectedValue.ToString()));
+            File.WriteAllBytes("ReporteDemanda.pdf", reporteBytes);
+            visorPDF.LoadFile("ReporteDemanda.pdf");
+            visorPDF.setShowToolbar(true);
             
         }
     }

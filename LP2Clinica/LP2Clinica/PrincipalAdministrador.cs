@@ -23,6 +23,8 @@ namespace LP2Clinica
             InitializeComponent();
             _administrador = admin;
             daoRRHH = new RRHHWS.RRHHWSClient();
+            btnAdministrarPacientes.Visible = false;
+            btnAdministrarUsuarios.Visible = false;
 
         }
         public void abrirFormulario(Form formularioMostrar)
