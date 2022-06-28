@@ -32,9 +32,9 @@
             this.btnEnviarMensaje = new System.Windows.Forms.Button();
             this.txtMensaje = new System.Windows.Forms.TextBox();
             this.dgvBandeja = new System.Windows.Forms.DataGridView();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblMensajeEs = new System.Windows.Forms.Label();
             this.PanelChatFlow = new System.Windows.Forms.FlowLayoutPanel();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBandeja)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,11 +72,6 @@
             this.dgvBandeja.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBandeja_CellFormatting);
             this.dgvBandeja.SelectionChanged += new System.EventHandler(this.dgvBandeja_SelectionChanged);
             // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "nombre";
-            this.nombre.Name = "nombre";
-            // 
             // lblMensajeEs
             // 
             this.lblMensajeEs.AutoSize = true;
@@ -94,6 +89,12 @@
             this.PanelChatFlow.Size = new System.Drawing.Size(246, 444);
             this.PanelChatFlow.TabIndex = 114;
             this.PanelChatFlow.WrapContents = false;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.Width = 200;
             // 
             // FrmBandejadeEntrada
             // 
@@ -127,8 +128,8 @@
         private System.Windows.Forms.Button btnEnviarMensaje;
         private System.Windows.Forms.TextBox txtMensaje;
         private System.Windows.Forms.DataGridView dgvBandeja;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.Label lblMensajeEs;
         private System.Windows.Forms.FlowLayoutPanel PanelChatFlow;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
     }
 }
