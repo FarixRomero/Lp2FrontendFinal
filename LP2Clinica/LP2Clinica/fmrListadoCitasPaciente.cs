@@ -25,11 +25,11 @@ namespace LP2Clinica
             daoGestionMedica = new GestionMedicaWS.GestionMedicaWSClient();
             IdPaciente = 44;
             GestionMedicaWS.citaMedica[] citaMedica = daoGestionMedica.buscarCitaXPaciente(IdPaciente);
-            if (citaMedica != null) {
+            dtgCitas.AutoGenerateColumns = false;
+            if (citaMedica != null && citaMedica.Length > 0) {
                 dtgCitas.DataSource = 
                     new BindingList<GestionMedicaWS.citaMedica>(citaMedica.ToList());
             }
-            dtgCitas.AutoGenerateColumns = false;
         }
 
         public void SetPrincipal(PrincipalCliente principal)

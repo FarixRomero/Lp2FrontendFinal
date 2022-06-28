@@ -32,11 +32,11 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnDiagnostico = new System.Windows.Forms.Button();
             this.dtgCitas = new System.Windows.Forms.DataGridView();
-            this.lblCitas = new System.Windows.Forms.Label();
             this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDoctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblCitas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCitas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,6 +89,7 @@
             // dtgCitas
             // 
             this.dtgCitas.AllowUserToAddRows = false;
+            this.dtgCitas.AllowUserToDeleteRows = false;
             this.dtgCitas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dtgCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -99,11 +100,44 @@
             this.dtgCitas.Location = new System.Drawing.Point(39, 128);
             this.dtgCitas.Margin = new System.Windows.Forms.Padding(4);
             this.dtgCitas.Name = "dtgCitas";
+            this.dtgCitas.ReadOnly = true;
             this.dtgCitas.RowHeadersWidth = 51;
             this.dtgCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgCitas.Size = new System.Drawing.Size(716, 399);
             this.dtgCitas.TabIndex = 96;
             this.dtgCitas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dtgCitas_CellFormatting);
+            // 
+            // colId
+            // 
+            this.colId.HeaderText = "Id";
+            this.colId.MinimumWidth = 6;
+            this.colId.Name = "colId";
+            this.colId.ReadOnly = true;
+            this.colId.Width = 125;
+            // 
+            // colDoctor
+            // 
+            this.colDoctor.HeaderText = "Doctor";
+            this.colDoctor.MinimumWidth = 6;
+            this.colDoctor.Name = "colDoctor";
+            this.colDoctor.ReadOnly = true;
+            this.colDoctor.Width = 300;
+            // 
+            // colFecha
+            // 
+            this.colFecha.HeaderText = "fecha";
+            this.colFecha.MinimumWidth = 6;
+            this.colFecha.Name = "colFecha";
+            this.colFecha.ReadOnly = true;
+            this.colFecha.Width = 125;
+            // 
+            // colEstado
+            // 
+            this.colEstado.HeaderText = "Estado";
+            this.colEstado.MinimumWidth = 6;
+            this.colEstado.Name = "colEstado";
+            this.colEstado.ReadOnly = true;
+            this.colEstado.Width = 125;
             // 
             // lblCitas
             // 
@@ -118,34 +152,6 @@
             this.lblCitas.TabIndex = 103;
             this.lblCitas.Text = "LISTADO DE CITAS";
             this.lblCitas.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // colId
-            // 
-            this.colId.HeaderText = "Id";
-            this.colId.MinimumWidth = 6;
-            this.colId.Name = "colId";
-            this.colId.Width = 125;
-            // 
-            // colDoctor
-            // 
-            this.colDoctor.HeaderText = "Doctor";
-            this.colDoctor.MinimumWidth = 6;
-            this.colDoctor.Name = "colDoctor";
-            this.colDoctor.Width = 300;
-            // 
-            // colFecha
-            // 
-            this.colFecha.HeaderText = "fecha";
-            this.colFecha.MinimumWidth = 6;
-            this.colFecha.Name = "colFecha";
-            this.colFecha.Width = 125;
-            // 
-            // colEstado
-            // 
-            this.colEstado.HeaderText = "Estado";
-            this.colEstado.MinimumWidth = 6;
-            this.colEstado.Name = "colEstado";
-            this.colEstado.Width = 125;
             // 
             // fmrListadoCitasPaciente
             // 
