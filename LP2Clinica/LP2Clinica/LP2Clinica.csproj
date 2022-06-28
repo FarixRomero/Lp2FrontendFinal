@@ -102,6 +102,12 @@
     <Compile Include="frmBuscarRecetaMedica.Designer.cs">
       <DependentUpon>frmBuscarRecetaMedica.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCalendarioMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalendarioMedico.Designer.cs">
+      <DependentUpon>frmCalendarioMedico.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCalificaryComentar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -330,6 +336,12 @@
     <Compile Include="frmBuscarDiagnostico.Designer.cs">
       <DependentUpon>frmBuscarDiagnostico.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVerCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerCitas.Designer.cs">
+      <DependentUpon>frmVerCitas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImprimirDiagnostico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -380,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarRecetaMedica.resx">
       <DependentUpon>frmBuscarRecetaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCalendarioMedico.resx">
+      <DependentUpon>frmCalendarioMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCalificaryComentar.resx">
       <DependentUpon>frmCalificaryComentar.cs</DependentUpon>
@@ -494,6 +509,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarDiagnostico.resx">
       <DependentUpon>frmBuscarDiagnostico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerCitas.resx">
+      <DependentUpon>frmVerCitas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImprimirDiagnostico.resx">
       <DependentUpon>ImprimirDiagnostico.cs</DependentUpon>
@@ -630,6 +648,9 @@
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarCitaMedicaXAdminResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarCitaMedicaXIDMedicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarComentariosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -643,6 +664,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarHistorialClinicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarHorariosXIDMedicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarHorariosXMedicoYDiaResponse.datasource">

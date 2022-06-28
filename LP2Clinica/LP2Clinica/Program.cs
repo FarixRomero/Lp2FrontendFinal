@@ -15,11 +15,11 @@ namespace LP2Clinica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(true);
-            Application.Run(new frmGestionarCitasMedicas());
+            Application.Run(new frmGenerarDiagnostico());
 
         }
         */
-
+        ///*
         
         static void Main()
         {
@@ -43,6 +43,6 @@ namespace LP2Clinica
                 Application.OpenForms[0].FormClosed += INICIO_Closed;
             }
         }
-
+        //*/
     }
 }
