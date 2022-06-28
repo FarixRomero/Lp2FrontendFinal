@@ -57,10 +57,10 @@ namespace LP2Clinica
                 _medicoGestion.cant_pacientes = _medicoGestion.cant_pacientes + 1;
                 _medicoGestion.calificacion = (_medicoGestion.calificacion*_medicoGestion.cant_pacientes + puntuacion) / _medicoGestion.cant_pacientes;
 
-                
-                int resultado = daoGestionMedica.modificarMedico(_medicoGestion);
+                int resultado;
+                resultado = daoGestionMedica.modificarMedico(_medicoGestion);
                 if (resultado == 1)
-                {
+                {   
                     //Se ingresa el comentario
                     GestionMedicaWS.comentario comentario = new GestionMedicaWS.comentario();
                     comentario.descripcion = txtComentario.Text;
@@ -68,6 +68,7 @@ namespace LP2Clinica
                     comentario.fecha_comentario = DateTime.Today;
                     comentario.fecha_comentarioSpecified = true;
                     resultado = daoGestionMedica.insertarComentario(comentario);
+                    
                     if (resultado == 1)
                     {
                         MessageBox.Show("Se ha registrado la calificacion y el comentario correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -102,11 +103,10 @@ namespace LP2Clinica
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(txtCodigoCita.Text);
-            //_medicoSeleccionado = daoRRHH.buscarMedicoPorIdCuentaUsuario(id);
-            _medicoGestion = daoGestionMedica.buscarMedicoPorIdCuentaUsuario(210);
-            lblNombreCompletoResultado.Text = _medicoSeleccionado.nombre + " " + _medicoSeleccionado.apellido;
-            //lblEspecialidadResultado.Text = _medicoSeleccionado.especialidad.nombre;
+            
+            _medicoGestion = daoGestionMedica.buscarMedicoPorId(Int32.Parse(txtCodigoCita.Text));
+            lblNombreCompletoResultado.Text = _medicoGestion.nombre + " " + _medicoGestion.apellido;
+            lblEspecialidadResultado.Text = _medicoGestion.especialidad.nombre;
         }
     }
 }
