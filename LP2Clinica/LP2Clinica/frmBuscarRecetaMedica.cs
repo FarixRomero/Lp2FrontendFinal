@@ -26,20 +26,25 @@ namespace LP2Clinica
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //DESCOMENTAR
-            //GestionMedicaWS.recetaMedica[] recetas = daoGestionMedica.listarRecetaMedicaXDNIoNombre(txtIngreso.Text);
-            //if(recetas!=null)
-            //    dgvReceta.DataSource=new BindingList<GestionMedicaWS.recetaMedica>(recetas.ToList());
+
+            
+            GestionMedicaWS.recetaMedica[] recetas = daoGestionMedica.listarRecetaMedicaXDNIoNombre(txtIngreso.Text);
+            if(recetas!=null)
+                dgvReceta.DataSource=new BindingList<GestionMedicaWS.recetaMedica>(recetas.ToList());
+            
+
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            
             if (dgvReceta.CurrentRow != null)
             {
                 //recetaSeleccionado = (GestionMedicaWS.recetaMedica)dgvReceta.CurrentRow.DataBoundItem;
                 //recetaSeleccionado.lineasRecetaMedica = daoGestionMedica.listarLineasXIdReceta(recetaSeleccionado.idReceta);
                 //this.DialogResult = DialogResult.OK;
             }
+            
         }
 
         private void dgvReceta_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

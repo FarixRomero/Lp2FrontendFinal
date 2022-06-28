@@ -55,6 +55,12 @@
     <Compile Include="CartillaInformacion.Designer.cs">
       <DependentUpon>CartillaInformacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat.Designer.cs">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\GestionMedicaWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,6 +84,12 @@
     <Compile Include="frmAdministrarMedico.Designer.cs">
       <DependentUpon>frmAdministrarMedico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBandejadeEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBandejadeEntrada.Designer.cs">
+      <DependentUpon>FrmBandejadeEntrada.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarDiagnostico2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +108,12 @@
     <Compile Include="frmBuscarRecetaMedica.Designer.cs">
       <DependentUpon>frmBuscarRecetaMedica.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCalendarioMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalendarioMedico.Designer.cs">
+      <DependentUpon>frmCalendarioMedico.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCalificaryComentar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +125,12 @@
     </Compile>
     <Compile Include="frmCitaMedica.designer.cs">
       <DependentUpon>frmCitaMedica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCitasAntesQueTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCitasAntesQueTu.Designer.cs">
+      <DependentUpon>frmCitasAntesQueTu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCodigoContraseña.cs">
       <SubType>Form</SubType>
@@ -173,6 +197,12 @@
     </Compile>
     <Compile Include="frmIngresarNuevaContraseña.Designer.cs">
       <DependentUpon>frmIngresarNuevaContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListadeCitasDelDiaPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListadeCitasDelDiaPaciente.Designer.cs">
+      <DependentUpon>frmListadeCitasDelDiaPaciente.cs</DependentUpon>
     </Compile>
     <Compile Include="frmModificarDatos.cs">
       <SubType>Form</SubType>
@@ -312,17 +342,17 @@
     <Compile Include="frmBuscarDiagnostico.Designer.cs">
       <DependentUpon>frmBuscarDiagnostico.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVerCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerCitas.Designer.cs">
+      <DependentUpon>frmVerCitas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImprimirDiagnostico.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ImprimirDiagnostico.Designer.cs">
       <DependentUpon>ImprimirDiagnostico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="modificardatosmedicos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="modificardatosmedicos.Designer.cs">
-      <DependentUpon>modificardatosmedicos.cs</DependentUpon>
     </Compile>
     <Compile Include="NuevoRegistroDeterminarTipo.cs">
       <SubType>Form</SubType>
@@ -360,6 +390,9 @@
     <EmbeddedResource Include="frmAdministrarMedico.resx">
       <DependentUpon>frmAdministrarMedico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBandejadeEntrada.resx">
+      <DependentUpon>FrmBandejadeEntrada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarDiagnostico2.resx">
       <DependentUpon>frmBuscarDiagnostico2.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,11 +402,17 @@
     <EmbeddedResource Include="frmBuscarRecetaMedica.resx">
       <DependentUpon>frmBuscarRecetaMedica.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCalendarioMedico.resx">
+      <DependentUpon>frmCalendarioMedico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCalificaryComentar.resx">
       <DependentUpon>frmCalificaryComentar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCitaMedica.resx">
       <DependentUpon>frmCitaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCitasAntesQueTu.resx">
+      <DependentUpon>frmCitasAntesQueTu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCodigoContraseña.resx">
       <DependentUpon>frmCodigoContraseña.cs</DependentUpon>
@@ -410,6 +449,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmIngresarNuevaContraseña.resx">
       <DependentUpon>frmIngresarNuevaContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListadeCitasDelDiaPaciente.resx">
+      <DependentUpon>frmListadeCitasDelDiaPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmModificarDatos.resx">
       <DependentUpon>frmModificarDatos.cs</DependentUpon>
@@ -477,11 +519,11 @@
     <EmbeddedResource Include="frmBuscarDiagnostico.resx">
       <DependentUpon>frmBuscarDiagnostico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmVerCitas.resx">
+      <DependentUpon>frmVerCitas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImprimirDiagnostico.resx">
       <DependentUpon>ImprimirDiagnostico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="modificardatosmedicos.resx">
-      <DependentUpon>modificardatosmedicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoRegistroDeterminarTipo.resx">
       <DependentUpon>NuevoRegistroDeterminarTipo.cs</DependentUpon>
@@ -502,10 +544,6 @@
     </EmbeddedResource>
     <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS.wsdl" />
     <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS1.wsdl" />
-    <None Include="Connected Services\GestionMedicaWS\GestionMedicaWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.buscarCitaMedicaPorIdResponse.datasource">
@@ -619,6 +657,12 @@
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarCitaMedicaXAdminResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarCitaMedicaXIDMedicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarCitasXPacienteYFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarComentariosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -632,6 +676,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarHistorialClinicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarHorariosXIDMedicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionMedicaWS\LP2Clinica.GestionMedicaWS.listarHorariosXMedicoYDiaResponse.datasource">
@@ -739,7 +786,7 @@
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.especialidad.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.generarReporteCitasDiaActualResponse1.datasource">
+    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.generarReporteCitasDiaActualResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.generarReporteDemandaResponse.datasource">
@@ -764,6 +811,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarBandejaDeMedicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarBandejaDePacienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\RRHHWS\LP2Clinica.RRHHWS.listarConsultoriosResponse.datasource">
@@ -988,6 +1038,25 @@
     <None Include="Resources\icono-del-usuario-mensaje-correo-sobre-electrónico-110413673-removebg-preview1.png" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
@@ -1019,23 +1088,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="AcroPDFLib">
-      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="AxAcroPDFLib">
-      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
+    <None Include="Resources\PANTALLA B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PANTALLA B1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -148,6 +148,7 @@ namespace LP2Clinica
         //Seleccionar
         private void button1_Click(object sender, EventArgs e)
         {
+            
             if ((dgvMedicos.SelectedRows.Count != 1))
             {
                 MessageBox.Show("Debe seleccionar Medico", "Mensaje de recordatorio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -170,7 +171,7 @@ namespace LP2Clinica
 
             }
        
-
+            
         }
 
         private void dgvHora_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

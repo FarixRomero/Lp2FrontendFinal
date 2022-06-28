@@ -59,8 +59,14 @@ namespace LP2Clinica
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             // aqui debe ir una pantalla especial para modificar la medico
-            frmAdministrarMedico ad_medico = new frmAdministrarMedico();
-            ad_medico.ShowDialog();
+
+            RRHHWS.medico _medicoSeleccionado = (RRHHWS.medico)dgvMedicos.CurrentRow.DataBoundItem;
+
+            if(_medicoSeleccionado != null)
+            {
+                frmAdministrarMedico ad_medico = new frmAdministrarMedico(_medicoSeleccionado);
+                ad_medico.ShowDialog();
+            }
         }
 
 

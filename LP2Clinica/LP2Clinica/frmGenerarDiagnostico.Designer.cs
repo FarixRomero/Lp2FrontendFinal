@@ -167,7 +167,7 @@
             this.gpPaciente.Controls.Add(this.lblNombrePaciente);
             this.gpPaciente.Controls.Add(this.lblCita);
             this.gpPaciente.Controls.Add(this.lblPaciente);
-            this.gpPaciente.Location = new System.Drawing.Point(41, 101);
+            this.gpPaciente.Location = new System.Drawing.Point(41, 82);
             this.gpPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.gpPaciente.Name = "gpPaciente";
             this.gpPaciente.Padding = new System.Windows.Forms.Padding(4);

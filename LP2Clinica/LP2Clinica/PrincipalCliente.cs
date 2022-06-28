@@ -114,6 +114,7 @@ namespace LP2Clinica
 
         }
 
+
         private void btnDiagnostico_Click(object sender, EventArgs e)
         {
             /*
@@ -126,11 +127,24 @@ namespace LP2Clinica
             formMostrarDiagnostico.SetPrincipal(this);
             abrirFormulario(formMostrarDiagnostico);
             */
-            fmrListadoCitasPaciente formListadoCitasPaciente = new fmrListadoCitasPaciente();
+            fmrListadoCitasPaciente formListadoCitasPaciente = new fmrListadoCitasPaciente(paciente.id_paciente);
             formListadoCitasPaciente.SetPrincipal(this);
             //formListadoCitasPaciente.idPaciente = paciente.id_paciente;
             abrirFormulario(formListadoCitasPaciente); 
             //hola
+        }
+
+        private void btnChats_Click(object sender, EventArgs e)
+        {
+            FrmBandejadeEntrada bandeja = new FrmBandejadeEntrada(null, paciente); 
+            abrirFormulario(bandeja);
+                
+        }
+
+        private void btnCOLA_Click(object sender, EventArgs e)
+        {
+            frmListadeCitasDelDiaPaciente cola = new frmListadeCitasDelDiaPaciente(paciente);
+            abrirFormulario(cola);
         }
     }
 

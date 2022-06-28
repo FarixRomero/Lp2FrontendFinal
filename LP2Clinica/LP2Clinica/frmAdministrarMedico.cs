@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,41 +13,83 @@ namespace LP2Clinica
 {
     public partial class frmAdministrarMedico : Form
     {
-        Form formularioActivo = null;
-        public frmAdministrarMedico()
+        private RRHHWS.medico _medico;
+        private RRHHWS.RRHHWSClient daoRRHH;
+        private Estado _estado;
+        public frmAdministrarMedico(RRHHWS.medico medico)
         {
             InitializeComponent();
-            abrirFormulario(new CartillaInformacion());
+
+            daoRRHH = new RRHHWS.RRHHWSClient();
+            this._medico = medico;
+
+            if (medico.foto.Length != 0)
+            {
+                MemoryStream ms = new MemoryStream(medico.foto);
+                pbFoto.Image = new Bitmap(ms);// mostrará la foto
+            }
+
+            _estado = Estado.Inicial;
+            establecerEstadoComponentes();
+            limpiarComponentes();
+        }
+
+        public void establecerEstadoComponentes()
+        {
+            switch (_estado)
+            {
+                case Estado.Inicial:
+                    btnEditarDatos.Enabled = true;
+                    btnGuardar.Visible = false;
+                    btnCancelar.Visible = false;
+                    btnVerCalendario.Enabled = true;
+                    btnCerrar.Enabled = true;
+                    txtCorreo.Enabled = false;
+                    txtUser.Enabled = false;
+                    break;
+
+                case Estado.Modificar:
+                    btnEditarDatos.Enabled = true;
+                    btnGuardar.Visible = true;
+                    btnCancelar.Visible = true;
+                    btnVerCalendario.Enabled = false;
+                    btnCerrar.Enabled = true;
+                    txtCorreo.Enabled = true;
+                    txtUser.Enabled = true;
+                    break;
+
+                case Estado.Buscar:
+                    
+                    break;
+            }
+        }
+        public void limpiarComponentes()
+        {
+            lblNombreCompleto.Text = _medico.nombre + " " + _medico.apellido;
+            lblDNI.Text = _medico.DNI;
+            lblEspecialidad.Text = _medico.especialidad.nombre;
+            txtCorreo.Text = _medico.email;
+            txtUser.Text = _medico.username;
         }
 
         private void btnEditarDatos_Click(object sender, EventArgs e)
         {
-            //Aqui se modifican los datos y para ello se envia a otro formulario donde se muestra 
-            //la información que se va a modificar
-            modificardatosmedicos modificarmedico= new modificardatosmedicos();
-            modificarmedico.Principal = this;
-            modificarmedico.Anterior = new CartillaInformacion();
-            abrirFormulario(modificarmedico);
+            _estado = Estado.Modificar;
+            establecerEstadoComponentes();
         }
-        public void abrirFormulario(Form formularioMostrar)
-        {
-            if (formularioActivo != null)
-                formularioActivo.Close();
-            formularioActivo = formularioMostrar;
-            formularioMostrar.TopLevel = false;
-            formularioMostrar.FormBorderStyle = FormBorderStyle.None;
-            formularioMostrar.Dock = DockStyle.Fill;
-            panelContenedor.Controls.Add(formularioMostrar);
-            formularioMostrar.Show();
-        }
+        
         private void btnRegistrarCita_Click(object sender, EventArgs e)
         {
-
+        
         }
 
         private void btnVerCalendario_Click(object sender, EventArgs e)
         {
-
+            frmCalendarioMedico formCalendarioMedico = new frmCalendarioMedico(_medico);
+            if (formCalendarioMedico.ShowDialog() == DialogResult.OK)
+            {
+                
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -63,13 +106,35 @@ namespace LP2Clinica
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            DialogResult respuesta = MessageBox.Show("¿Está seguro que deseas dejar incompleto el registro?",
-                "Mensaje de Confirmación", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question);
-            if (respuesta == DialogResult.Yes)
+            this.Close();
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            _estado = Estado.Inicial;
+            establecerEstadoComponentes();
+            limpiarComponentes();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            RRHHWS.medico medicoModificado = _medico;
+            medicoModificado.email = txtCorreo.Text;
+            medicoModificado.username = txtUser.Text;
+
+            int resultado = daoRRHH.modificarUsuario(medicoModificado);
+            if (resultado != 0)
             {
-                this.Close();
+                MessageBox.Show("Se ha modificado el medico correctamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _estado = Estado.Inicial;
+                establecerEstadoComponentes();
+                limpiarComponentes();
             }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error con la modificación del médico", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

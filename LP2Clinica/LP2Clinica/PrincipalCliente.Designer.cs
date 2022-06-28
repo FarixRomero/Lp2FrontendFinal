@@ -30,6 +30,7 @@
         {
             this.Menú = new System.Windows.Forms.Panel();
             this.btnDiagnostico = new System.Windows.Forms.Button();
+            this.btnChats = new System.Windows.Forms.Button();
             this.btnCalificar = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnVerPerfil = new System.Windows.Forms.Button();
@@ -41,6 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnReservarCita = new System.Windows.Forms.Button();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnCOLA = new System.Windows.Forms.Button();
             this.Menú.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -51,7 +53,9 @@
             // 
             this.Menú.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(114)))));
             this.Menú.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Menú.Controls.Add(this.btnCOLA);
             this.Menú.Controls.Add(this.btnDiagnostico);
+            this.Menú.Controls.Add(this.btnChats);
             this.Menú.Controls.Add(this.btnCalificar);
             this.Menú.Controls.Add(this.btnCerrarSesion);
             this.Menú.Controls.Add(this.btnVerPerfil);
@@ -62,30 +66,44 @@
             this.Menú.Controls.Add(this.btnModificarCuenta);
             this.Menú.Controls.Add(this.pictureBox1);
             this.Menú.Controls.Add(this.btnReservarCita);
-            this.Menú.Location = new System.Drawing.Point(2, 2);
-            this.Menú.Margin = new System.Windows.Forms.Padding(2);
+            this.Menú.Location = new System.Drawing.Point(3, 2);
+            this.Menú.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Menú.Name = "Menú";
-            this.Menú.Size = new System.Drawing.Size(247, 531);
+            this.Menú.Size = new System.Drawing.Size(329, 739);
             this.Menú.TabIndex = 0;
             // 
             // btnDiagnostico
             // 
             this.btnDiagnostico.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnDiagnostico.Location = new System.Drawing.Point(25, 411);
+            this.btnDiagnostico.Location = new System.Drawing.Point(31, 575);
+            this.btnDiagnostico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDiagnostico.Name = "btnDiagnostico";
-            this.btnDiagnostico.Size = new System.Drawing.Size(202, 44);
+            this.btnDiagnostico.Size = new System.Drawing.Size(269, 54);
             this.btnDiagnostico.TabIndex = 24;
             this.btnDiagnostico.Text = "Imprimir diagnostico";
             this.btnDiagnostico.UseVisualStyleBackColor = false;
             this.btnDiagnostico.Click += new System.EventHandler(this.btnDiagnostico_Click);
             // 
+            // btnChats
+            // 
+            this.btnChats.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnChats.ImageKey = "(ninguno)";
+            this.btnChats.Location = new System.Drawing.Point(31, 635);
+            this.btnChats.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnChats.Name = "btnChats";
+            this.btnChats.Size = new System.Drawing.Size(269, 65);
+            this.btnChats.TabIndex = 38;
+            this.btnChats.Text = "Chats";
+            this.btnChats.UseVisualStyleBackColor = false;
+            this.btnChats.Click += new System.EventHandler(this.btnChats_Click);
+            // 
             // btnCalificar
             // 
             this.btnCalificar.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnCalificar.Location = new System.Drawing.Point(25, 355);
-            this.btnCalificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCalificar.Location = new System.Drawing.Point(31, 506);
+            this.btnCalificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCalificar.Name = "btnCalificar";
-            this.btnCalificar.Size = new System.Drawing.Size(200, 51);
+            this.btnCalificar.Size = new System.Drawing.Size(267, 63);
             this.btnCalificar.TabIndex = 23;
             this.btnCalificar.Text = "Calificar atencion";
             this.btnCalificar.UseVisualStyleBackColor = false;
@@ -94,10 +112,10 @@
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(107, 129);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(143, 159);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(105, 25);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(140, 31);
             this.btnCerrarSesion.TabIndex = 22;
             this.btnCerrarSesion.Text = "Cerrar Sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
@@ -106,10 +124,10 @@
             // btnVerPerfil
             // 
             this.btnVerPerfil.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnVerPerfil.Location = new System.Drawing.Point(107, 99);
-            this.btnVerPerfil.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVerPerfil.Location = new System.Drawing.Point(143, 122);
+            this.btnVerPerfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVerPerfil.Name = "btnVerPerfil";
-            this.btnVerPerfil.Size = new System.Drawing.Size(105, 25);
+            this.btnVerPerfil.Size = new System.Drawing.Size(140, 31);
             this.btnVerPerfil.TabIndex = 21;
             this.btnVerPerfil.Text = "Ver Perfil";
             this.btnVerPerfil.UseVisualStyleBackColor = false;
@@ -121,9 +139,10 @@
             this.lblCambiarPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblCambiarPassword.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCambiarPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(255)))), ((int)(((byte)(240)))));
-            this.lblCambiarPassword.Location = new System.Drawing.Point(110, 79);
+            this.lblCambiarPassword.Location = new System.Drawing.Point(147, 97);
+            this.lblCambiarPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCambiarPassword.Name = "lblCambiarPassword";
-            this.lblCambiarPassword.Size = new System.Drawing.Size(85, 17);
+            this.lblCambiarPassword.Size = new System.Drawing.Size(107, 22);
             this.lblCambiarPassword.TabIndex = 20;
             this.lblCambiarPassword.Text = "Bienvenid@";
             // 
@@ -131,10 +150,10 @@
             // 
             this.pictureBox3.BackgroundImage = global::LP2Clinica.Properties.Resources.user3;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(22, 91);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 97);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(81, 72);
+            this.pictureBox3.Size = new System.Drawing.Size(125, 105);
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
@@ -142,10 +161,10 @@
             // 
             this.btnBuscarMedico.BackColor = System.Drawing.Color.PowderBlue;
             this.btnBuscarMedico.ImageKey = "(ninguno)";
-            this.btnBuscarMedico.Location = new System.Drawing.Point(25, 243);
-            this.btnBuscarMedico.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarMedico.Location = new System.Drawing.Point(31, 372);
+            this.btnBuscarMedico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscarMedico.Name = "btnBuscarMedico";
-            this.btnBuscarMedico.Size = new System.Drawing.Size(200, 51);
+            this.btnBuscarMedico.Size = new System.Drawing.Size(267, 63);
             this.btnBuscarMedico.TabIndex = 6;
             this.btnBuscarMedico.Text = "Buscar Medico";
             this.btnBuscarMedico.UseVisualStyleBackColor = false;
@@ -155,20 +174,20 @@
             // 
             this.pictureBox2.BackgroundImage = global::LP2Clinica.Properties.Resources.QHALI;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(37, 19);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(65, 28);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(166, 34);
+            this.pictureBox2.Size = new System.Drawing.Size(295, 52);
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
             // btnModificarCuenta
             // 
             this.btnModificarCuenta.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnModificarCuenta.Location = new System.Drawing.Point(25, 299);
-            this.btnModificarCuenta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificarCuenta.Location = new System.Drawing.Point(31, 439);
+            this.btnModificarCuenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnModificarCuenta.Name = "btnModificarCuenta";
-            this.btnModificarCuenta.Size = new System.Drawing.Size(200, 51);
+            this.btnModificarCuenta.Size = new System.Drawing.Size(267, 63);
             this.btnModificarCuenta.TabIndex = 4;
             this.btnModificarCuenta.Text = "Modificar datos";
             this.btnModificarCuenta.UseVisualStyleBackColor = false;
@@ -178,20 +197,20 @@
             // 
             this.pictureBox1.BackgroundImage = global::LP2Clinica.Properties.Resources.bone_2;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 280);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 423);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(247, 251);
+            this.pictureBox1.Size = new System.Drawing.Size(439, 380);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // btnReservarCita
             // 
             this.btnReservarCita.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnReservarCita.Location = new System.Drawing.Point(25, 187);
-            this.btnReservarCita.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReservarCita.Location = new System.Drawing.Point(33, 236);
+            this.btnReservarCita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReservarCita.Name = "btnReservarCita";
-            this.btnReservarCita.Size = new System.Drawing.Size(200, 51);
+            this.btnReservarCita.Size = new System.Drawing.Size(267, 63);
             this.btnReservarCita.TabIndex = 1;
             this.btnReservarCita.Text = "Reservar cita";
             this.btnReservarCita.UseVisualStyleBackColor = false;
@@ -199,22 +218,35 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.Location = new System.Drawing.Point(248, 3);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
+            this.panelContenedor.Location = new System.Drawing.Point(331, 4);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(611, 531);
+            this.panelContenedor.Size = new System.Drawing.Size(815, 737);
             this.panelContenedor.TabIndex = 6;
+            // 
+            // btnCOLA
+            // 
+            this.btnCOLA.BackColor = System.Drawing.Color.PowderBlue;
+            this.btnCOLA.ImageKey = "(ninguno)";
+            this.btnCOLA.Location = new System.Drawing.Point(31, 303);
+            this.btnCOLA.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnCOLA.Name = "btnCOLA";
+            this.btnCOLA.Size = new System.Drawing.Size(269, 65);
+            this.btnCOLA.TabIndex = 39;
+            this.btnCOLA.Text = "Ver cola de espera";
+            this.btnCOLA.UseVisualStyleBackColor = false;
+            this.btnCOLA.Click += new System.EventHandler(this.btnCOLA_Click);
             // 
             // PrincipalCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(64)))), ((int)(((byte)(91)))));
-            this.ClientSize = new System.Drawing.Size(859, 535);
+            this.ClientSize = new System.Drawing.Size(1145, 739);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.Menú);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PrincipalCliente";
             this.ShowIcon = false;
             this.Text = "Menú";
@@ -243,6 +275,10 @@
         private System.Windows.Forms.Button btnVerPerfil;
         private System.Windows.Forms.Button btnCerrarSesion;
         private System.Windows.Forms.Button btnCalificar;
+
         private System.Windows.Forms.Button btnDiagnostico;
+
+        private System.Windows.Forms.Button btnChats;
+        private System.Windows.Forms.Button btnCOLA;
     }
 }
