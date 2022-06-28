@@ -56,7 +56,7 @@
             // panelContenedor
             // 
             this.panelContenedor.Location = new System.Drawing.Point(251, 0);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(611, 531);
             this.panelContenedor.TabIndex = 8;
@@ -83,7 +83,7 @@
             this.Menú.Controls.Add(this.pictureBox2);
             this.Menú.Controls.Add(this.pictureBox1);
             this.Menú.Location = new System.Drawing.Point(1, 1);
-            this.Menú.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Menú.Margin = new System.Windows.Forms.Padding(2);
             this.Menú.Name = "Menú";
             this.Menú.Size = new System.Drawing.Size(247, 644);
             this.Menú.TabIndex = 7;
@@ -91,8 +91,8 @@
             // btnMostrarDemanda
             // 
             this.btnMostrarDemanda.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnMostrarDemanda.Location = new System.Drawing.Point(22, 572);
-            this.btnMostrarDemanda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMostrarDemanda.Location = new System.Drawing.Point(22, 522);
+            this.btnMostrarDemanda.Margin = new System.Windows.Forms.Padding(2);
             this.btnMostrarDemanda.Name = "btnMostrarDemanda";
             this.btnMostrarDemanda.Size = new System.Drawing.Size(200, 45);
             this.btnMostrarDemanda.TabIndex = 34;
@@ -104,7 +104,7 @@
             // 
             this.btnAdministrarMedicamentos.BackColor = System.Drawing.Color.PowderBlue;
             this.btnAdministrarMedicamentos.Location = new System.Drawing.Point(22, 473);
-            this.btnAdministrarMedicamentos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdministrarMedicamentos.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdministrarMedicamentos.Name = "btnAdministrarMedicamentos";
             this.btnAdministrarMedicamentos.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarMedicamentos.TabIndex = 30;
@@ -116,8 +116,8 @@
             // 
             this.btnAdministrarUsuarios.BackColor = System.Drawing.Color.PowderBlue;
             this.btnAdministrarUsuarios.ImageKey = "(ninguno)";
-            this.btnAdministrarUsuarios.Location = new System.Drawing.Point(22, 522);
-            this.btnAdministrarUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdministrarUsuarios.Location = new System.Drawing.Point(22, 571);
+            this.btnAdministrarUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdministrarUsuarios.Name = "btnAdministrarUsuarios";
             this.btnAdministrarUsuarios.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarUsuarios.TabIndex = 29;
@@ -129,7 +129,7 @@
             // 
             this.btnAdministrarEspecialidades.BackColor = System.Drawing.Color.PowderBlue;
             this.btnAdministrarEspecialidades.Location = new System.Drawing.Point(22, 374);
-            this.btnAdministrarEspecialidades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdministrarEspecialidades.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdministrarEspecialidades.Name = "btnAdministrarEspecialidades";
             this.btnAdministrarEspecialidades.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarEspecialidades.TabIndex = 28;
@@ -142,7 +142,7 @@
             this.btnAdministrarHorariosMedicos.BackColor = System.Drawing.Color.PowderBlue;
             this.btnAdministrarHorariosMedicos.ImageKey = "(ninguno)";
             this.btnAdministrarHorariosMedicos.Location = new System.Drawing.Point(22, 423);
-            this.btnAdministrarHorariosMedicos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdministrarHorariosMedicos.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdministrarHorariosMedicos.Name = "btnAdministrarHorariosMedicos";
             this.btnAdministrarHorariosMedicos.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarHorariosMedicos.TabIndex = 27;
@@ -154,7 +154,7 @@
             // 
             this.btnAdministrarConsultorios.BackColor = System.Drawing.Color.PowderBlue;
             this.btnAdministrarConsultorios.Location = new System.Drawing.Point(22, 324);
-            this.btnAdministrarConsultorios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdministrarConsultorios.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdministrarConsultorios.Name = "btnAdministrarConsultorios";
             this.btnAdministrarConsultorios.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarConsultorios.TabIndex = 26;
@@ -165,7 +165,7 @@
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(249, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(611, 531);
             this.panel2.TabIndex = 8;
@@ -173,8 +173,8 @@
             // btnAdministrarPacientes
             // 
             this.btnAdministrarPacientes.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnAdministrarPacientes.Location = new System.Drawing.Point(22, 224);
-            this.btnAdministrarPacientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdministrarPacientes.Location = new System.Drawing.Point(22, 176);
+            this.btnAdministrarPacientes.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdministrarPacientes.Name = "btnAdministrarPacientes";
             this.btnAdministrarPacientes.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarPacientes.TabIndex = 25;
@@ -187,7 +187,7 @@
             this.btnAdministrarMedicos.BackColor = System.Drawing.Color.PowderBlue;
             this.btnAdministrarMedicos.ImageKey = "(ninguno)";
             this.btnAdministrarMedicos.Location = new System.Drawing.Point(22, 274);
-            this.btnAdministrarMedicos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdministrarMedicos.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdministrarMedicos.Name = "btnAdministrarMedicos";
             this.btnAdministrarMedicos.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarMedicos.TabIndex = 23;
@@ -198,8 +198,8 @@
             // btnAdministrarCitas
             // 
             this.btnAdministrarCitas.BackColor = System.Drawing.Color.PowderBlue;
-            this.btnAdministrarCitas.Location = new System.Drawing.Point(22, 175);
-            this.btnAdministrarCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdministrarCitas.Location = new System.Drawing.Point(22, 225);
+            this.btnAdministrarCitas.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdministrarCitas.Name = "btnAdministrarCitas";
             this.btnAdministrarCitas.Size = new System.Drawing.Size(200, 45);
             this.btnAdministrarCitas.TabIndex = 4;
@@ -211,7 +211,7 @@
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.PowderBlue;
             this.btnCerrarSesion.Location = new System.Drawing.Point(107, 129);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(105, 25);
             this.btnCerrarSesion.TabIndex = 22;
@@ -223,7 +223,7 @@
             // 
             this.btnVerPerfil.BackColor = System.Drawing.Color.PowderBlue;
             this.btnVerPerfil.Location = new System.Drawing.Point(107, 99);
-            this.btnVerPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerPerfil.Name = "btnVerPerfil";
             this.btnVerPerfil.Size = new System.Drawing.Size(105, 25);
             this.btnVerPerfil.TabIndex = 21;
@@ -248,7 +248,7 @@
             this.pictureBox3.BackgroundImage = global::LP2Clinica.Properties.Resources.user3;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Location = new System.Drawing.Point(22, 91);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(81, 72);
             this.pictureBox3.TabIndex = 7;
@@ -259,7 +259,7 @@
             this.pictureBox2.BackgroundImage = global::LP2Clinica.Properties.Resources.QHALI;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Location = new System.Drawing.Point(37, 19);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(166, 34);
             this.pictureBox2.TabIndex = 5;
@@ -270,7 +270,7 @@
             this.pictureBox1.BackgroundImage = global::LP2Clinica.Properties.Resources.bone_2;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(0, 374);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(247, 254);
             this.pictureBox1.TabIndex = 3;
@@ -279,7 +279,7 @@
             // panelvisualizar
             // 
             this.panelvisualizar.Location = new System.Drawing.Point(248, 0);
-            this.panelvisualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelvisualizar.Margin = new System.Windows.Forms.Padding(2);
             this.panelvisualizar.Name = "panelvisualizar";
             this.panelvisualizar.Size = new System.Drawing.Size(611, 645);
             this.panelvisualizar.TabIndex = 8;
@@ -292,7 +292,7 @@
             this.ClientSize = new System.Drawing.Size(869, 622);
             this.Controls.Add(this.panelvisualizar);
             this.Controls.Add(this.Menú);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PrincipalAdministrador";
             this.Text = "PrincipalClinica";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PrincipalClinica_FormClosed);

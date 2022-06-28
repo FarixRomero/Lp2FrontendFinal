@@ -28,6 +28,7 @@ namespace LP2Clinica
             daoRRHH = new RRHHWS.RRHHWSClient();
             dtgConsultorio.AutoGenerateColumns = false;
             //_consultorioSeleccionado = new RRHHWS.consultorio();
+            btnSeleccionar.Visible = false;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

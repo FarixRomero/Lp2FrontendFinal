@@ -40,9 +40,9 @@ namespace LP2Clinica
             
             if (dgvReceta.CurrentRow != null)
             {
-                //recetaSeleccionado = (GestionMedicaWS.recetaMedica)dgvReceta.CurrentRow.DataBoundItem;
-                //recetaSeleccionado.lineasRecetaMedica = daoGestionMedica.listarLineasXIdReceta(recetaSeleccionado.idReceta);
-                //this.DialogResult = DialogResult.OK;
+                recetaSeleccionado = (GestionMedicaWS.recetaMedica)dgvReceta.CurrentRow.DataBoundItem;
+                recetaSeleccionado.lineasRecetaMedica = daoGestionMedica.listarLineasXIdReceta(recetaSeleccionado.idReceta);
+                this.DialogResult = DialogResult.OK;
             }
             
         }
